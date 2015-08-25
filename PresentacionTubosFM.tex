@@ -10,16 +10,21 @@
 \renewcommand{\figurename}{Figura}
 \usetheme{Warsaw}
 
+%Enumerar figuras
+\setbeamertemplate{caption}[numbered]
+
 
 \logo{\includegraphics[scale=0.05]{logoUNAM}}
 \begin{document}
 
 \begin{frame}
+\Large
 \title{Tubos fotomultiplicadores y fotodiodos}
 \author{Favio Vázquez}
 \date{$1^{ro}$ de septiembre de 2015}
 
-\Large{Láminas disponibles en }
+Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosmicos-PCF}{(\color{blue} GitHub})
+
 \maketitle
 \end{frame}
 
@@ -63,20 +68,20 @@
 \end{frame}
 
 \section{Estructura simplificada de un Tubo FM}
-\begin{frame}{Estructura simplificada de un Tubo FM}
+\begin{frame}[allowframebreaks]{Estructura simplificada de un Tubo FM}
  
  \begin{columns}[c]
-  \column{1in}
+  \column{1.5in}
   \begin{figure}
   \center
-   \includegraphics[scale=0.25]{fig2}
+   \includegraphics[scale=0.28]{fig2}
    \caption{Elementos básicos de un tubo FM}
   \end{figure}
 
   \column{2.5in}
   \begin{justify}
    
-   \small{Una envoltura (usualmente de vidrio) sirve como una barrera de presión
+   \footnotesize{Una envoltura (usualmente de vidrio) sirve como una barrera de presión
    para mantener las condiciones de vacío dentro del tubo, que son requeridas
    para que los electrones de bajas energías puedan ser acelerados eficientemente
    por los campos eléctricos internos.
@@ -99,6 +104,29 @@
 
  \end{columns} 
  
+ \framebreak
+ 
+  \begin{figure}
+  \center
+   \includegraphics[scale=0.4]{fig3}
+   \caption{Elementos básicos de un tubo FM}
+  \end{figure}
+  
+  \begin{justify}
+   \footnotesize{
+   Luego de una amplificación a través de la estructura multiplicadora, un pulso 
+   típico de centellador dará lugar a unos $10^7-10^10$ electrones, suficientes
+   para servir de señal de carga para el evento original de centelleo. Esta carga
+   es colectada convencionalmente en el ánodo o la etapa de salida de la estructura
+   multiplicadora.
+   
+   \vspace{.3cm}
+   
+   Tubos típicos, cuando son iluminados por un pulso de luz de muy corta duración,
+   producirán un pulso de electrones en un tiempo aproximado de unos pocos nanosegundos
+   luego de un tiempo de espera de $20-50$ ns.}
+   \end{justify}
+    
 \end{frame}
 
 
