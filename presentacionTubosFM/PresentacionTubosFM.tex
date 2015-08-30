@@ -10,8 +10,16 @@
 \renewcommand{\figurename}{Figura}
 \usetheme{Warsaw}
 
+%Borra el footer 
+\setbeamertemplate{footline}{}
+
 %Enumerar figuras
 \setbeamertemplate{caption}[numbered]
+
+%Alternativa a framebreak	
+\newcounter{tmp}
+\newcommand\savecounter{\setcounter{tmp}{\value{enumi}}}
+\newcommand\continuecounter{\setcounter{enumi}{\value{tmp}}}
 
 
 \logo{\includegraphics[scale=0.05]{logoUNAM}}
@@ -304,7 +312,7 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
    oxígeno y cesio $\Rightarrow$ $45\%$ a los 350 nm de máxima respuesta.\end{justify}
    \item \begin{justify}Materiales ultrapuros que reducen las trampas de electrones,
    reduciendo reflexiones desde el fotocátodo mediante una introducción
-   de de una capa antireflejante entre él y la envoltura de vidrio.\end{justify}
+   de de una capa anti-reflejante entre él y la envoltura de vidrio.\end{justify}
    \item \begin{justify}Estructuras prismáticas con un alto radio de superficie 
    a volumen para aumentar la probabilidad de escape de fotoelectrones.\end{justify}
   \end{itemize}
@@ -313,6 +321,86 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
  \end{justify}
 \end{frame}
 
+\section{Multiplicación de Electrones}
 
+\begin{frame}
+\begin{center}
+ \Huge{\color{blue}Multiplicación de Electrones} \\
+ \vspace{0.5cm}
+ \includegraphics[scale=0.3]{fig6}
+\end{center}
+\end{frame}
+
+\subsection{Emisión secundaria de electrones}
+\begin{frame}{Emisión secundaria de electrones-I}
+
+
+\begin{columns}[c]
+
+ \column{2in}
+\begin{figure}
+   \includegraphics[scale=0.32]{fig7}
+   \caption{Dos filas de dínodos dentro de un tubo FM.}
+  \end{figure}
+  
+  \column{2.3in}
+\begin{justify}
+  Los electrones desde el fotocátodo son acelerados y llevados a chocar la superficie 
+  de un electrodo, llamado el \emph{dínodo}. Si el material del dínodo se escoge bien,
+  la energía depositada por el electrón incidente puede resultar en la re-emisión de 
+  más de un electrón desde la superficie.
+ \end{justify}
+
+ \end{columns}
+
+\begin{itemize}[<+->]
+
+ \item[]  \begin{block}{Nota relevante}
+  \begin{justify}
+  \begin{footnotesize}
+   El proceso de emisión secundaria de electrones es similar al proceso que acabamos 
+   de ver, pero en este caso los electrones dentro del material del dínodo son 
+   exitados por el paso de un electrón energético en vez de un fotón óptico.
+   \end{footnotesize}
+  \end{justify}
+ \end{block}
+
+\end{itemize}
+\end{frame}
+
+  
+\begin{frame}{Emisión secundaria de electrones-II}
+
+ \begin{footnotesize}Los electrones que dejan el fotocátodo tienen una energía $\sim 1$ eV, o menos. 
+ Por lo tanto, si el primer dínodo tiene unos cuantos cientos de voltios positivos, 
+ la energía cinética de los electrones al llegar al dínodo está determinanda por 
+ el voltaje de aceleración. \end{footnotesize}
+ 
+ 
+  \begin{exampleblock}{Nota experimental}
+  \begin{footnotesize}
+  \begin{itemize}
+   \item \begin{justify}
+          La creación de un electrón excitado en el material del dínodo requiere una
+          energía al menos igual a la del bandgap $\sim 2-3$ eV.
+         \end{justify}
+   \item \begin{justify}
+          Es teóricamente posible que para un electrón incidente, se creen un 
+          aproximado de 30 electrones exitados por cada 100 V de voltaje acelerador.
+         \end{justify}
+   \item \begin{justify}
+          Debido a que la dirección de estos electrones es aleatoria, (1) algunos 
+          no llegarán a la superficie antes de des-excitarse, (2) otros llegan 
+          pero han perdido tanta energía que no pueden superar el potencial de barrera
+          y no pueden escapar. Por lo que solo una pequeña fracción de electrones 
+          excitados contribuirá últimamente a la emisión secundaria dada en la 
+          superficie del dínodo.
+         \end{justify}
+  \end{itemize}  
+  \end{footnotesize}
+ \end{exampleblock}
+
+\end{frame}
+ 
 
 \end{document}
