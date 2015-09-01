@@ -4,11 +4,21 @@
 \usepackage{colortbl}
 \usepackage{xcolor}
 \usepackage{caption}
+\usepackage{graphicx}
 \usepackage{ragged2e}
 \usepackage{hyperref}
 \usepackage{marvosym}
+\usepackage{mathtools}
+\usepackage{mdframed}
 \renewcommand{\figurename}{Figura}
 \usetheme{Warsaw}
+
+\def\@fnsymbol#1{\ensuremath{\ifcase#1\or \dagger\or \ddagger\or
+   \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+   \or \ddagger\ddagger \else\@ctrerr\fi}}%
+\renewcommand\thefootnote{\fnsymbol{footnote}}   
+\renewcommand\thempfootnote{\fnsymbol{mpfootnote}}
+\makeatother
 
 %Borra el footer 
 \setbeamertemplate{footline}{}
@@ -23,6 +33,7 @@
 
 
 \logo{\includegraphics[scale=0.05]{logoUNAM}}
+
 \begin{document}
 
 \begin{frame}
@@ -376,10 +387,9 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
  la energía cinética de los electrones al llegar al dínodo está determinanda por 
  el voltaje de aceleración. \end{footnotesize}
  
- 
   \begin{exampleblock}{Nota experimental}
   \begin{footnotesize}
-  \begin{itemize}
+  \begin{itemize}[<+->]
    \item \begin{justify}
           La creación de un electrón excitado en el material del dínodo requiere una
           energía al menos igual a la del bandgap $\sim 2-3$ eV.
@@ -396,11 +406,157 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
           excitados contribuirá últimamente a la emisión secundaria dada en la 
           superficie del dínodo.
          \end{justify}
+   \item \begin{justify}
+          La producción de electrones secundarios es una función sensible a la 
+          energía de los electrones incidentes.
+         \end{justify}
+
   \end{itemize}  
   \end{footnotesize}
  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[label=milink1]{Emisión secundaria de electrones-III}
+
+\begin{columns}[c]
+    \column{2in}
+ \begin{figure}
+  \center
+     \includegraphics[scale=0.4]{fig8}
+     \caption{Variación de la producción en la emisión secundaria con energía 
+   de electrón primaria para algunos materias estándares de dínodos (las 
+   tres de abajo) y un material NEA (negative-electron affinity) [GaP(CS)]}
+   \label{fig:fig8}
+   \end{figure}
+   \column{2in}
+ \begin{block}{Factor de multiplicación}
+  El factor de multiplicación para un dínodo está dado por:
+  \begin{equation*}  
+   \delta=\frac{\text{\parbox{12em}{\center número de electrones secundarios emitidos}}}{\text{electrones primarios
+   incidentes}}
+  \end{equation*}
+  \begin{justify}Este debe ser lo más grande posible para una máxima amplificación por etapa 
+  en el tubo FM.
+  \end{justify}
+  \end{block}
+  \end{columns}
+\end{frame}
+
+
+\subsection{Materiales de afinidad electrónica negativa}
+\begin{frame}{Materiales de afinidad electrónica negativa - I}
+
+\begin{columns}[c]
+
+\column{2.3in}
+\begin{justify}
+\begin{footnotesize}
+ La producción de emisión secundaria de los dínodos puede ser aumentada significativamente 
+ a través del uso de materiales de \textbf{afinidad electrónica negativa} (La afinidad electrónica es la 
+ variación de energía que se produce en la adición de un electrón al átomo en estado fundamenta
+ y en fase gaseosa para formar el anión correspondiente. La afinidad electrónica puede ser energía desprendida,
+ en cuyo caso tiene valor negativo y se trata de átomos con tendencia a captar electrones - no metales.)
+ \end{footnotesize}
+ \end{justify}
+ \column{2in}
+ 
+ \begin{center}
+  \includegraphics[scale=0.2]{fig9}
+ \end{center}
+
+
+\end{columns}
+ 
+  \begin{block}{Nota relevante}
+  El más exitoso de estos materiales ha sido el fosfuro de galio (GaP), altamente 
+  dopados, a una concentración de casi $10^19$ átomos/cm$^3$ con zinc. Y una capa
+  delgada de cesio.
+ \end{block}
 
 \end{frame}
+
+\begin{frame}{Materiales de afinidad electrónica negativa - II}
+
+\begin{figure}
+ \includegraphics[scale=0.33]{fig10}
+ \caption{Estructura de banda cerca de la superficie para semiconductores 
+ convencionales (izquierda) y materiales NEA (derecha).}
+\end{figure}
+
+\begin{block}{Nota relevante}
+\begin{justify}
+ A la derecha se muestra la flexión de banda creada por el llenado de lugares 
+ aceptadores en la superficie por la capa delgada de Cs. El efecto de esto, 
+ es llevar el potencial de vacío más abajo que el del fondo de la banda de 
+ conducción en el interior del material.
+ \end{justify}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Materiales de afinidad electrónica negativa - III}
+ 
+ \begin{exampleblock}{Nota experimental}
+  \begin{itemize}
+  \item \begin{justify}
+	El efecto neto es que los electrones que han llegado al fondo de la banda 
+	de conducción, aún son candidatos a escapar, y se quedan así por un tiempo 100
+	veces mayor que antes 
+	\end{justify}
+ \item \begin{justify}
+        Este aumento de tiempo en que los electrones pueden escapar, aumenta 
+        las probabilidades de escapa para un electrón típico\footnote{Ver figura
+        5. \hyperlink{milink1}{\beamerreturnbutton{Ir}}}.
+       \end{justify}
+  \end{itemize}
+ \end{exampleblock}
+ 
+ \begin{block}{Nota relevante}
+  Otra ventaja de utilizar materiales NEA es en tubos FM usados para 
+  aplicaciones de medición temporal ultrarápida.
+ \end{block}
+\end{frame}
+
+\subsection{Múltiples etapas de multiplicación}
+\begin{frame}{Múltiples etapas de multiplicación - I}
+ \begin{justify}
+ Los electrones son guiados por otro campo eléctrico de dínodo en dínodo, en
+ la cual se repite la etapa  de multiplicación varias veces. Si se requieren 
+ $N$ etapas en la sección multiplicadora, la ganancia total para el tubo FM
+ está dada simplemente por 
+ 
+ \begin{equation}
+  \text{Ganancia total} = \alpha \delta^N
+ \end{equation}
+ 
+ donde $\alpha$ es la fracción de todos los fotoelectrones colectados por la 
+ estructura multiplicadora.
+\end{justify}
+ 
+ \begin{exampleblock}{Nota experimental}
+ \begin{itemize}
+ \begin{footnotesize}
+\item \begin{justify}
+  Los materiales de dínodo convencionales están caracterizados por valores típicos 
+  de $\delta=5$ y $\alpha \sim 1$ para tubos bien diseñados. Entonces diez etapas
+  resultarán en una ganancia total de $5^10$ o $10^7$. Sise utilizan materiales 
+  NEA entonces $\delta \sim 55$, y la misma ganancia se puede conseguir en 4 etapas.
+ \end{justify}
+\item \begin{justify}
+       La ganancia total de un tubo FM es una función sensible del voltaje aplicado $V$.
+      \end{justify}
+ \end{footnotesize}
+ \end{itemize} 
+ \end{exampleblock}
+
+ 
+\end{frame}
+
+
+
+
+
+
  
 
 \end{document}
