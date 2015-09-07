@@ -31,6 +31,9 @@
 \newcommand\savecounter{\setcounter{tmp}{\value{enumi}}}
 \newcommand\continuecounter{\setcounter{enumi}{\value{tmp}}}
 
+%Borra cabecera
+\setbeamertemplate{headline}{}
+
 
 \logo{\includegraphics[scale=0.05]{logoUNAM}}
 
@@ -311,7 +314,7 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
 
   \end{columns}
 
-  \pause
+  \framebreak
   
   \textbf{Materiales actuales para la construcción de fotocátodos}:
   
@@ -552,11 +555,177 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
  
 \end{frame}
 
+\subsection{Estadística de la multiplicación de electrones}
+\begin{frame}{Estadística de la multiplicación de electrones - I}
 
-
-
-
-
+\begin{justify}
+ La emisión de electrones secundarios es un proceso estadístico, y por lo tanto el 
+ valor específico de $\delta$ en un dínodo dado, fluctuará de evento en evento sobre 
+ su valor medio. En el modelo más simple, la producción de electrones secundarios en 
+ un dínodo, puede asumirse que sigue un distribución de Poisson sobre la producción media.
+ Por lo tanto para un un fotoelectrón incidente en el primer dínodo, el número de 
+ secundarios productidos tiene un valor medio de $\delta$ y una desviación estándar 
+ $\sigma$ de $\sqrt{\delta}$.
+ \end{justify}
  
+ \begin{columns}[c]
+
+ \column{2in}
+ \begin{block}{Nota Relevante}
+ \begin{justify}
+ \begin{footnotesize}
+ La varianza relativa definida por $(\sigma/\delta)^2$, es igual a $1/\delta$. Recordando 
+ la distribución de Poisson, entonces es fácil ver que cuando este proceso se repite 
+ sobre $N$ etapas idénticas en el tubo FM, el número medio de electrones colectados en 
+ el ánodo será igual a $\delta^N$.
+ \end{footnotesize}
+ \end{justify}
+ \end{block}
+ \column{2in}
+ \begin{block}{Nota Relevante}
+ \begin{justify}
+  Si $\delta \gg 1$, entonces la varianza relativa o la expansión en la amplitud 
+  del pulso de salida es dominada por fluctuaciones en la producción desde el primer
+  dínodo, donde el número absoluto de electrones es el más pequeño.
+  \end{justify}
+ \end{block}
+ \end{columns}
+
+\end{frame}
+
+\begin{frame}{Estadística de la multiplicación de electrones - II}
+ \begin{columns}[c]
+  
+  \column{1.5in}
+\begin{figure}
+ \includegraphics[scale=0.35]{fig11}
+\end{figure}
+  \column{1.5in}
+\begin{figure}
+ \includegraphics[scale=0.35]{fig12}
+\end{figure} 
+ \end{columns}
+ 
+ \begin{exampleblock}{Nota experimental}
+  \begin{justify}
+  \begin{footnotesize}
+   Las figuras de arriba muestran la distribución esperada en el número de 
+   electrones secundarios producidos por el primer dínodo, cuando es golpeado 
+   por diferentes números de fotoelectrones. Si el valor de $\delta$ es pequeño 
+   es imposible separar limpiamente los eventos causados por un fotoelectrón de 
+   aquellos en los que más fotoelectrones están presentes.
+   \end{footnotesize}
+   \end{justify}
+ \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Estadística de la multiplicación de electrones - III}
+
+ \begin{columns}[c]
+ 
+\column{2in}
+
+\begin{figure}
+ \includegraphics[scale=0.2]{fig13}
+\end{figure}
+
+\begin{exampleblock}{Nota experimental}
+\begin{justify}
+\begin{footnotesize}
+Si los dínodos están caracterizados por valores grandes de $\delta$, la separación 
+es mucho más discernible y es posible distinguir picos en la distribución correspondiente 
+a números discretos de fotoelectrones hasta 4 o 5.
+\end{footnotesize}
+\end{justify}
+\end{exampleblock}
+
+\column{2in}
+
+\begin{exampleblock}{Nota experimental}
+\begin{justify}
+\begin{footnotesize}
+Algunas mediciones experimentales muestran una varianza relativa mayor que la predicha 
+por el modelo de Poisson. De hecho, algunas observaciones no muestran picos, sino 
+una distribución tipo exponencial. Esto ha llevado a utilizar modelos de distribución
+Polya, Poisson compuestos y algunos otros. \textbf{No existe aún una descripción universal
+que acomode todas las mediciones experimentales en este caso.}
+\end{footnotesize}
+\end{justify}
+\end{exampleblock}
+
+\end{columns}
+
+\end{frame}
+
+\section{Características de los tubos FM}
+
+\begin{frame}
+\begin{center}
+ \Huge{\color{blue}Características de los tubos FM} \\
+ \vspace{0.5cm}
+ \includegraphics[scale=1]{fig14}
+\end{center}
+\end{frame}
+
+\subsection{Diferencias estructurales}
+\begin{frame}{Diferencias estructurales - I}
+ 
+\begin{justify}
+ Todos consisten de un fotocátodo semitransparente, una región de colección de fotoelectrones
+ entre el fotocátodo y el primer dínodo, una sección de multiplicación de electrones 
+ multietapa, y un ánodo para la colección de la carga amplificada. Estas estructuras están
+ encerradas en una envoltura de vidrio al vacío, por la cual cables eléctricos son conducidos 
+ en la base. (Les leeré un poquito sobre algunos tipos).
+\end{justify}
+
+\begin{figure}
+\center
+ \includegraphics[scale=0.4]{fig15}
+ \caption{\begin{footnotesize} Configuraciones para algunos tipos comunes de tubos FM. $(a)$ Estructura 
+ lineal enfocada. $(b)$ Red circular. $(c)$ Persiana veneciana.
+ $(d)$ Caja y red. \end{footnotesize}}
+\end{figure}
+ 
+\end{frame}
+
+\begin{frame}{Diferencias estructurales - II}
+\begin{columns}[c]
+\column{2in}
+ \begin{exampleblock}{Nota experimental}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+          Los tubos con un plato plano de vidrio al final son los únicos tipos,
+	  usados para conteo de centelladores.
+         \end{justify}
+   \item \begin{justify}
+          Un diámetro de 5 cm es uno de las elecciones más comunes para aplicaciones 
+          de centelleo.
+         \end{justify}
+   \item \begin{justify}
+          Los tubos FM deben protegerse de vibraciones o choque mecánicos excesivos 
+          para evitar un daño físico a los componentes internos.
+         \end{justify}
+  \end{itemize}
+ \end{exampleblock}
+
+  \column{2in}
+  
+  \begin{center}
+ \includegraphics[scale=0.08]{fig22}
+ \end{center}
+  
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Diferencias estructurales - III}
+ \begin{center}
+  \Huge{\color{blue}Algunos tubos FM reales} \\
+  \vspace{0.5cm}
+ \includegraphics[scale=0.33]{fig21}
+ \end{center}
+\end{frame}
+
+
+
 
 \end{document}
