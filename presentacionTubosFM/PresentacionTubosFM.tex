@@ -1023,7 +1023,7 @@ del cátodo al ánodo.
  {\Large{\textbf{\color{red}IMPORTANTE}}}
  
  \begin{exampleblock}{Nota experimental}
-    \begin{itemize}
+    \begin{itemize}[<+->]
      \item \begin{justify}
             Para algunos fotocátodos la tasa en la cual se emiten los electrones termiónicos 
             puede ser reducida \emph{drásticamente} enfriando el tubo. Reducciones 
@@ -1048,15 +1048,79 @@ del cátodo al ánodo.
  \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Ruido y pulsos falsos - II}
+\begin{frame}{Ruido y pulsos falsos - III}
  
+ \begin{justify}
  Otra fuente de pulsos oscuros se origina de la radiactividad natural en la estructura 
- del tubo. Los componentes más importantes son usualmente $^40$K y thorium contenidos 
+ del tubo. Los componentes más importantes son usualmente $^{40}$K y torio contenidos 
  en la envoltura de vidrio. Una partícula $\beta$ producida en el decaimiento radiactivo
  dará lugar a un flash de radiación Cherenkov, que puede liberar fotoelectrones del 
  fotocátodo de una manera muy parecida a los eventos de centelleo.
+ \end{justify}
+ 
+ \begin{columns}[c]
+  
+
+  \column{2in}
+   \begin{figure}
+    \center 
+    \includegraphics[scale=0.3]{fig28}
+   \end{figure}
+
+  \column{2.5in}
+  \begin{block}{Nota relevante}
+  \begin{justify}
+  La radiación de Cherenkov es una radiación de tipo electromagnético producida
+  por el paso de partículas cargadas eléctricamente en un determinado medio a 
+  velocidades superiores a las de la luz en ese medio. 
+  
+  \vspace{.3cm}
+  
+  La radiación Cherenkov es un tipo de onda de choque que
+  produce el brillo azulado característico de los reactores nucleares. 
+  Éste es un fenómeno similar al de la generación de una onda de choque 
+  cuando se supera la velocidad del sonido.
+  \end{justify}
+  \end{block}
+  
+ \end{columns}
+
  
 \end{frame}
+
+\begin{frame}{Ruido y pulsos falsos - IV}
+ 
+  {\Large{\textbf{\color{blue}Radiación de Cherenkov y Rayos Cósmicos}}}
+
+ \begin{justify} 
+ 
+ El centelleo o luz de Cherenkov producida en el vidrio por radiación externa puede 
+ ser también una fuente significativa de pulsos oscuros. Una de esas fuentes es la 
+ \textbf{radiación cósmica}, que generalmente resulta en pulsos oscuros de pequeña amplitud 
+ de la luz de Cherenkov producida en la ventana fina del tubo.
+ 
+ \vspace{.3cm}
+ 
+ Debido a la poca pérdida de energía específica de las radiaciones cósmicas 
+ secundarias y la poca producción e luz en el proceso de Cherenkov, los pulsos 
+ oscuros corresponden a unos pocos fotoelectrones y pueden ser descartados 
+ por discriminación de amplitud en aplicaciones de centelleo típicas. Sin embargo,
+  si se deben registrar eventos de poco centelleo, estos pulsos pueden ser 
+  del mismo tamaño al de la señal.
+  
+  \begin{exampleblock}{Nota experimental}
+  \begin{justify}
+  La tasa de radiación cósmica puede minimizarse operando el tubo con su eje 
+  mayor orientado horizontalmente, para que la ventada posterior presente la
+  sección transversal mínima a los secundarios cósmicos que vienen dirigidos 
+  preferencialmente en una dirección vertical.
+  \end{justify} 
+  \end{exampleblock}
+ 
+\end{justify} 
+\end{frame}
+
+
 
 
 
