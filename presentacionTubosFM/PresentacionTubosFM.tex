@@ -950,6 +950,114 @@ del cátodo al ánodo.
  
 \end{frame}
 
+\subsection{Linealidad}
+\begin{frame}{Linealidad}
+ 
+  \begin{justify}
+  El factor de multiplicación de electrones en la mayoría de los tubos FM se mantiene 
+  constante para pulsos en el rango de un solo fotoelectrón a varios miles. Bajo estas 
+  condiciones la amplitud del pulso colectado en el ánodo está relacionado linealmente 
+  con el número de foto electrones, y por lo tanto con la intensidad de el haz de 
+  luz de la centelladora.
+  \end{justify}
+  
+  \begin{block}{Nota relevante}
+  \begin{justify}
+   Las no-linealidades pueden surgir para pulsos muy grandes, causadas por efectos 
+   de carga espacial entre el último dínodo y el ánodo, cuando el número de electrones 
+   es el mayor.
+   \end{justify}
+  \end{block}
+  
+  \begin{exampleblock}{Nota experimental}
+   \begin{justify}
+    El voltaje de operación tal vez deba reducirse para disminuir la ganancia y prevenit 
+    la distorción de la linealidad del tubo FM, aún así la amplitud de pulso integrado 
+    haya incrementado solo por un factor de dos (2).
+   \end{justify}
+  \end{exampleblock}
+ 
+\end{frame}
+
+\subsection{Ruido y pulsos falsos}
+\begin{frame}{Ruido y pulsos falsos - I}
+ \begin{justify}
+  
+  Usualmente la fuente más significante de ruido aleatorio desde un tubo FM resulta 
+  de los electrones termiónicos que son emitidos espontáneamente por el fotocátodo.
+  Los pulsos que resultan de este proceso corresponden a un solo fotoelectrón, así que 
+  su amplitud está limitada a la parte más baja en la escala.
+  
+ \end{justify}
+ 
+ \begin{columns}[c]
+  
+ \column{2in}
+ \begin{figure}
+  \center 
+  \includegraphics[scale=0.25]{fig27}
+  \caption{``Espectro oscuro'' en el cual esencialmente todos los pulsos provienen de 
+  electrones aislados emitidos por el fotocátodo.}
+ \end{figure}
+
+  \column{2.6in}
+  \begin{exampleblock}{Nota experimental}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+           La tasa en la que estos pulsos son observados es proporcional al área del fotocátodo,
+	   y por lo tanto se deben escoger tubos con el diámetro más pequeño requerido para 
+	  una aplicación en orden de minimizar estos pulsos oscuros.
+         \end{justify}
+  \item \begin{justify}
+         Las tasas típicas de emisión espontánea a temperatura ambiente están en el 
+         rango de los $10^2-10^4$ electrones/cm$^2$ $\cdot$ s. 
+        \end{justify}
+  \end{itemize}
+  \end{exampleblock}
+ 
+ \end{columns}
+\end{frame}
+
+\begin{frame}{Ruido y pulsos falsos - II}
+ 
+ {\Large{\textbf{\color{red}IMPORTANTE}}}
+ 
+ \begin{exampleblock}{Nota experimental}
+    \begin{itemize}
+     \item \begin{justify}
+            Para algunos fotocátodos la tasa en la cual se emiten los electrones termiónicos 
+            puede ser reducida \emph{drásticamente} enfriando el tubo. Reducciones 
+            por un factor de 100 pueden ser observadas con una reducción adecuada 
+            de la temperatura. Para esto se puede usar hielo seco, nitrógeno líquido 
+            o refrigeradores comerciales para este propósito.
+           \end{justify}
+     \item \begin{justify}
+            Los tubos fotomultiplicadores deben guardarse en la oscuridad cuando no 
+            se están utilizando. La exposición a la luz de habitación, o la solar, 
+            es desastrosa cuando se está supliendo de voltaje al tubo porque altos 
+            niveles de iluminación llevan a corrientes del ánodo que exceden mucho 
+            los índices máximos y pueden dañar muy rápido las estructuras multiplicadoras.
+           \end{justify}
+     \item \begin{justify}
+            No es inusual observar un incremento de hasta 100 veces o más en la tasa de 
+            pulsos oscuros inmediatamente después de una exposición a luz ambiental 
+            intensa.
+           \end{justify}
+    \end{itemize}
+
+ \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Ruido y pulsos falsos - II}
+ 
+ Otra fuente de pulsos oscuros se origina de la radiactividad natural en la estructura 
+ del tubo. Los componentes más importantes son usualmente $^40$K y thorium contenidos 
+ en la envoltura de vidrio. Una partícula $\beta$ producida en el decaimiento radiactivo
+ dará lugar a un flash de radiación Cherenkov, que puede liberar fotoelectrones del 
+ fotocátodo de una manera muy parecida a los eventos de centelleo.
+ 
+\end{frame}
+
 
 
 
