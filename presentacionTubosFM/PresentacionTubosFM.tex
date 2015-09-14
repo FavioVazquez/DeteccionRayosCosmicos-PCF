@@ -50,14 +50,11 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
 \maketitle
 \end{frame}
 
-\section[\'Indice]{}
-\frame{
-
-\Large{\'Indice}
+\begin{frame}{Índice}
 
 \tableofcontents
 
-}
+\end{frame}
 
 \section{Introducción}
 \begin{frame}[allowframebreaks]{Introducción}
@@ -724,6 +721,224 @@ que acomode todas las mediciones experimentales en este caso.}
  \includegraphics[scale=0.33]{fig21}
  \end{center}
 \end{frame}
+
+\subsection{Propiedades de temporización de pulsos}
+\begin{frame}{Propiedades de temporización de pulsos - I}
+
+\begin{justify}
+Los tiempos característicos de un tubo FM están determinados exclusivamente 
+por las trayectorias de electrones. El tiempo de tránsito de electrón de 
+un tubo FM está definido por la diferencia de tiempo promedio entre la 
+llegada de un fotón al fotocátodo y la colección de la subsecuente ráfaga 
+de electrones en el ánodo.
+\end{justify}
+
+\begin{exampleblock}{Nota experimental}
+ \begin{itemize} [<+->]
+  \item \begin{justify}
+         Los rangos de tiempo para el transito de electrón está entre los 
+         $20-80$ ns. 
+        \end{justify}
+  \item \begin{justify}
+         Sin embargo el tránsito solo no es de primaria importancia. El 
+         esparcimiento del tiempo de tránsito es una cantidad más importante 
+         porque determina la anchura de tiempo del pulso de electrones 
+         que están llegando en el ánodo del tubo.
+        \end{justify}
+ \end{itemize}
+\end{exampleblock}
+ 
+\end{frame}
+
+\begin{frame}{Propiedades de temporización de pulsos - II}
+ 
+ \begin{columns}[c]
+  \column{2in}
+  
+  \begin{figure}
+  \includegraphics[scale=0.4]{fig23}
+   \caption{Trayectorias generadas por computadora de los electrones 
+   acelerados desde el fotocátodo al primer dínodo en un tubo FM.}
+  \end{figure}
+  
+  \column{2.5in}
+  \begin{exampleblock}{Nota experimental}
+   \begin{itemize} [<+->]
+    \item \begin{justify}
+           La región entre el fotocátodo y el primer dínodo es crítica en 
+           la determinación de las propiedades temporales. Para permitir 
+           un colección uniforme sobre fotocátodos grandes, la distancia 
+           entre ellos es considerablemente grande comparado con las distancias 
+           entre dínodos.
+          \end{justify}
+    \item \begin{justify}
+           La diferencia en los caminos entre un fotoelectrón que 
+           deja el fotocátodo en el centro, y uno que lo deja en un 
+           borde es un factor dominante en el esparcimiento observado 
+           en el tiempo de tránsito.
+          \end{justify}
+   \end{itemize}
+
+   
+  \end{exampleblock}  
+ \end{columns}
+
+\end{frame}
+
+
+\begin{frame}{Propiedades de temporización de pulsos - III}
+ 
+ \begin{columns}[c]
+  \column{2in}
+  
+  \begin{figure}
+  \includegraphics[scale=0.4]{fig23}
+   \caption{Trayectorias generadas por computadora de los electrones 
+   acelerados desde el fotocátodo al primer dínodo en un tubo FM.}
+  \end{figure}
+  
+  \column{2.5in}
+  \begin{exampleblock}{Nota experimental}
+   \begin{itemize} [<+->]
+    \item \begin{justify}
+	  El fotocátodo usualmente es curvado para minimizar el esparcimiento 
+	  del tiempo de tránsito a lo largo de su diámetro.
+          \end{justify}
+    \item \begin{justify}
+          Una segunda fuente de esparcimiento de tiempo de tránsito surge de 
+          la distribución inicial de velocidades de los fotoelectrones que 
+          dejan el fotocátodo. Este efecto se puede minimizar usando una diferencia
+          de voltaje más grande entre el fotocátodo y el primer dínodo.
+          \end{justify}
+   \end{itemize} 
+  \end{exampleblock}  
+ \end{columns}
+
+\end{frame}
+
+\begin{frame}{Propiedades de temporización de pulsos - IV}
+ \begin{justify}
+
+ Para simplificar el análisis y comparación entre diferentes fotomultiplicadores, 
+ muchas de las mediciones reportadas en la literatura se concentran en el 
+ esparcimiento de tiempo de tránsito debido a un sólo fotoelectrón. Por otra parte,
+ si la distribución en los varios posibles esparcimientos en el tiempo de tránsito 
+ se asumen gaussianos, la teoría estadística predice que el esparcimiento relativo
+ en el tiempo de tránsito variará inversamente con la raíz cuadrada del número 
+ de fotoelectrones.
+
+ \end{justify}
+ 
+ \begin{columns}[c]
+  \column{2in}
+  \begin{figure}
+   \center 
+   \includegraphics[scale=0.3]{fig24}
+  \end{figure}
+  
+  \column{2in}
+  \begin{block}{Nota relevante}
+  \begin{justify}
+   En la figura de la izquierda se verifica este comportamiento. Una alta producción 
+   de luz de un centellador es importante en las aplicaciones de temporización, así 
+   como en las mediciones de amplitud de pulso
+   \end{justify}
+  \end{block}
+ \end{columns}
+
+\end{frame}
+
+\begin{frame}{Propiedades de temporización de pulsos - V}
+\begin{exampleblock}{Nota experimental}
+ \begin{justify}
+ El esparcimiento temporal atribuible a la sección multiplicadora decrece con un 
+ mayor voltaje entre dínodos, y el mejor desempeño en temporización normalmente es 
+ obtenido operando el tubo al máximo voltaje permitido por los índices.
+ 
+ \vspace{.3cm}
+ 
+ Cuando se usan con centelladoras inorgánicas lentas, los tubos FM son lo suficientemente
+ rápidos para que su contribución al tiempo total de respuesta usualmente no sea 
+ un factor importante. Sólo cuando se emplean centelladoras con un tiempo de 
+ decaimiento más bajo para derivar en una señal temporizadora rápida, que 
+ los tubos FM se pueden convertir en un elemento significante en la determinación 
+ de las propiedades de temporización resultantes.
+ 
+ \end{justify}
+\end{exampleblock}
+ \end{frame}
+ 
+\subsection{Índices máximos}
+\begin{frame}{Índices máximos}
+
+\begin{columns}[c]
+
+\column{2in}
+\begin{footnotesize}
+\begin{justify}
+Todos los tubos FM comerciales vienen con un conjunto de índices de voltajes máximos 
+y corrientes máximas que no deben excederse durante el uso rutinario. Las especificaciones 
+detalladas también darán valores individuales para los voltajes máximos entre 
+el fotocátodo y el primer dínodo, dínodo a dínodo, del último dínodo al ánodo y 
+del cátodo al ánodo.
+\end{justify}
+\end{footnotesize}
+
+\begin{exampleblock}{Nota experimental}
+\begin{justify}
+ Debido a que virtualmente todos los tubos FM mostrarán un incremento en la ganancia 
+ cuando el voltaje se aumenta, el valor máximo de voltaje aplicado prácticamente 
+ determina la ganancia máxima que se puede obtener del tubo.
+ \end{justify}
+\end{exampleblock}
+
+\column{2in}
+
+\begin{figure}
+ \center
+ \includegraphics[scale=0.22]{fig25}
+\end{figure}
+
+\begin{figure}
+ \center
+ \includegraphics[scale=0.22]{fig26}
+\end{figure}
+\end{columns}
+
+\end{frame}
+
+\subsection{Especificaciones para tubos FM}
+\begin{frame}{Especificaciones para tubos FM}
+
+\begin{itemize}[<+->]
+ \item \begin{justify}
+        \textbf{Sensitividad luminosa total (A/lm)}: Razón entre la corriente medida en el
+        ánodo a un voltaje de operación y el flujo luminoso de una fuente de luz de 
+        tungsteno de temperatura especificada incidente en el fotocátodo.
+       \end{justify}
+ \item \begin{justify}
+        \textbf{Sensitividad luminosa delc cátodo (A/lm)}: Definida como arriba, 
+        excepto que la corriente de fotoelectrones que dejan el fotocátodo 
+        es sustituida en el numerador por la corriente del ánodo.
+       \end{justify}
+ \item \begin{justify}
+        \textbf{Sensitividad radiante total (A/W)}: Razón entre la corriente 
+        del ánodo.
+       \end{justify}
+ \item \begin{justify}
+        
+       \end{justify}
+ \item \begin{justify}
+        
+       \end{justify}
+ \item \begin{justify}
+        
+       \end{justify}
+\end{itemize}
+
+ 
+\end{frame}
+
 
 
 
