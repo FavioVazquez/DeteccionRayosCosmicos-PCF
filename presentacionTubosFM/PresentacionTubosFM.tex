@@ -50,7 +50,7 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
 \maketitle
 \end{frame}
 
-\begin{frame}{Índice}
+\begin{frame}[allowframebreaks]{Índice}
 
 \tableofcontents
 
@@ -1189,5 +1189,132 @@ del cátodo al ánodo.
  \hspace{.3cm} \href{http://www.ebay.com/itm/HAMAMATSU-2-0-INCH-PHOTOMULTIPLIER-TUBE-/351425074352}{\color{blue}.::Link de eBay::.}
 \end{center}
 \end{frame}
+
+\subsection{Alimentación de alto voltaje y divisor de voltaje}
+\begin{frame}{Alimentación de alto voltaje y divisor de voltaje - I}
+  
+ \begin{justify} 
+ Una fuente externa de voltaje debe estar conectada a los tubos FM de manera tal que 
+ el fotocátodo y cada etapa multiplicadora sucesiva esté correctamente parcializada 
+ con respecto a la otra.
+ 
+ \begin{exampleblock}{Nota experimental}
+ \begin{justify}
+  Debido a que los electrones deben ser atraídos, el primer dínido debe estar a 
+  un voltaje positivo con respecto al fotocátodo, y cada dínodo siguiente debe estar 
+  a un voltaje positivo con respecto al anterior. Para una colección eficiente de 
+  fotoelectrones, el voltaje entre el fotocátodo y el primer dínodo usualmente 
+  es más grande que las diferencias de voltaje entre dínodos.
+  \end{justify}
+ \end{exampleblock}
+ 
+\begin{exampleblock}{Nota experimental}s
+ \begin{justify}
+  Los requerimientos de voltaje entre etapas de un tubo FM pueden, en principio, 
+  ser suministrados por fuentes individuales de voltaje como baterías multi-celdas.
+  Éstas son práctivas en algunas aplicaciones donde las tasas de cuentas son baja, pero 
+  no son muy atractivas debido a tasas de descarga muy rápidas por la demanda 
+  de corriente de etapas posteriores del tubo FM.
+  \end{justify}
+ \end{exampleblock}
+ 
+ \end{justify}
+\end{frame}
+
+\begin{frame}{Alimentación de alto voltaje y divisor de voltaje - II}
+ 
+ En la mayoría de los casos, las diferencias de voltaje son suministradas por divisores 
+ de voltaje y una simple fuente de alto voltaje.
+ 
+ \begin{figure}
+  \center
+  \includegraphics[scale=0.4]{fig30}
+  \caption{\footnotesize Diagramas típicos de cableado para la base de un tubo FM. El esquema (a)
+  utiliza alto voltaje positivo y un fotocátodo conectado a tierra. El esquema (b)
+  utiliza alto voltaje negativo, y el fotocátodo debe estar aislado de la tierra. 
+  Capacitancia de ánodo $C_A$, Resistencia de carga $R_L,$, Capacitores estabilizadores 
+  $C_S$}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Alimentación de alto voltaje y divisor de voltaje - III}
+ \begin{block}{Nota relevante}
+  \begin{justify}
+  \footnotesize
+   Si la corriente interna en el pico de un pulso se hace comparable con la corriente 
+   de división, los voltajes de los dínodos normalmente comenzarán a desviarse de 
+   sus valores de equilibrio, lleando a variaciones en la ganancia del tubo FM.
+  \end{justify}
+ \end{block}
+  
+  \begin{exampleblock}{Nota experimental}
+  \footnotesize
+   Para eliminar este efecto, es común utilizar capacitadores estabilizadores para 
+   las etapas de la cuerda divisora cerca del ánodo para ayudar a mantener estos 
+   voltajes posteriores del dínodo a un valor constante durante el pulso.
+  \end{exampleblock}
+  
+  \begin{exampleblock}{Nota experimental (IMPORTANTE)}
+   \footnotesize
+   \begin{itemize}[<+->]
+    \item \begin{justify}
+          Para prevenir un cambio de voltaje entre dínodos mayor a 1\%, la carga 
+          guardada en el capacitor estabilizador debe ser 100 veces más grande que 
+          la emitida por ese dínodo durante el pulo
+          \end{justify}
+     \item \begin{justify}
+          \textbf{La polaridad ($+$ o $-$) del alto voltaje usando en los tubos FM 
+          es en algún sentido una elección arbitraria. Es muy importante que el usuario 
+          sepa que convención ha sido utilizada por el fabricante para su tubo 
+          antes del uso inicial del equipo con un tubo FM}. Aplicar la polaridad 
+          errónea a un tubo FM usualmente no es fatal para el tubo, pero los 
+          electrones se negarán a ``nadar cuesta arriba'' y el tubo FM no funcionará.
+          \end{justify}
+   \end{itemize}
+
+  \end{exampleblock}
+
+\end{frame}
+
+\subsection{Recubrimiento magnético}
+\begin{frame}{Recubrimiento magnético}
+ 
+ 
+ \begin{columns}[c]
+ 
+\column{2in}
+ \begin{block}{Nota relevante}
+  \begin{justify}
+  \footnotesize
+   La óptica de electrones adentro de un tubo FM es particularmente sensible a campos 
+   magnéticos debido al bajo promedio de energía (del orden de los 100 eV) de los 
+   electrones que viajan de etapa en etapa. Hasta la influencia del campo magnético 
+   de la Tierra es suficiente para tener un efecto apreciable en la trayectoria de 
+   los electrones.
+  \end{justify}
+  \end{block}
+    
+  \column{2in}
+  
+  \includegraphics[scale=0.25]{fig31}
+
+   \end{columns}
+   
+   
+  \begin{exampleblock}{Nota experimental}
+   \begin{justify}
+    En las situaciones en la que es probable mover físicamente el tuvo o 
+    acercarlo a equipo con campo magnético, es esencial un recubrimiento magnético 
+    para prevenir cambios en la ganancia del tubo. Los más comunes consisten 
+    en un cilindro fino de mu-metal (aleación de níquel-hierro y otros elementos 
+    como el molibdeno) que se ajusta estrechamente a la envoltura de vidrio de 
+    un tubo FM.
+   \end{justify}
+    \end{exampleblock}
+
+\end{frame}
+
+
+
 
 \end{document}
