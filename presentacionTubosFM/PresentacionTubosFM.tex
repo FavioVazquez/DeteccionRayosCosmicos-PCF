@@ -1400,6 +1400,111 @@ del cátodo al ánodo.
  
 \end{frame}
 
+\subsection{Fotodiodos convencionales}
+
+\begin{frame}{Fotodiodos convencionales - I}
+
+\begin{justify}
+La luz incide en una ventana de entrada, hecha de semiconductor (SM) tipo $p$\footnote{Este 
+tipo de SM se obtiene llevando a cabo un proceso de dopado, añadiendo un 
+cierto tipo de átomos al SM para aumentar el número de portadores de cargas libres, 
+en este caso positivos o huecos.}, que se mantiene lo más delgada posible para mejorar 
+la transmisión de luz al volumen activo de silicio. Los electrones y hoyos producidos 
+por la luz son colectados en las fronteras de la región-$i$ central, llevados por 
+el campo eléctrico resultante del voltaje aplicado. La carga inducida correspondiente 
+es procesada en un pre-amplificador para producir una pulso de señal de salida.
+\end{justify}
+
+\begin{figure}
+ \center 
+ \includegraphics[scale=0.42]{fig40}
+ \caption{Configuración básica de un fotodiodo convencional}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Fotodiodos convencionales - II}
+ 
+ \begin{exampleblock}{Nota experimental}
+  
+  \begin{itemize}
+   \item \begin{justify}
+          Debido a la baja amplitud de la señal, el ruido electrónico es un problema 
+          muy importante en el modo de operación de pulsos, especialmente para detectores 
+          de gran área y radiaciones de baja energía.
+         \end{justify}
+    \item \begin{justify}
+          Sakai midió que la resolución energética a unos 662 keV puede ser hasta 2 veces menor que 
+          las mediciones en un tubo FM. Las diferencias son mucho menores para rayos 
+          gamma de alta energía, pero el rendimiento de los tubo FM siempre era mejor.
+         \end{justify}
+  \end{itemize}  
+ \end{exampleblock}
+
+ \begin{block}{Nota relevante}
+ \begin{itemize}
+  \item \begin{justify}
+          Aplicaciones exitosas hoy en día se limitan a radiaciones de alta energía 
+          y diodos de diámetros pequeños, para los cuales la corriente oscura asociada 
+          y capacitancia son pequeñas.
+         \end{justify}
+ \item  \begin{justify}
+          Los fotodiodos convencionales se han convertido en el detector de luz
+          por excelencia para centelladoras en modo corriente usadas en tomografías 
+          computacionales de rayos-X, y escáneres para imágenes médicas.
+         \end{justify}
+ \end{itemize}
+ \end{block}
+\end{frame}
+
+\begin{frame}{Fotodiodos convencionales - III}
+ 
+ El ruido en estos foto diodos surge principalmente de dos fuentes distintas:
+ 
+ \begin{enumerate}
+  \item \begin{justify}
+	  \textbf{Ruido en serie}: Se origina en la etapas iniciales de 
+	  preamplificación. Aumentan con la capacitancia del detector.
+	\end{justify}
+  \item \begin{justify}
+         \textbf{Ruido paralelo}: Se origina debido a grandes fluctuaciones en 
+         la corriente de fuga en el fotodiodo. Aumenta con el tamaño del fotodiodo.
+        \end{justify}
+ \end{enumerate}
+ 
+ \begin{exampleblock}{Nota experimental}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+          La capacitancia del fotodiodo decrecerá mientras su grosor aumenta, pero 
+          la coriente de fuga tenderá a aumentar.
+         \end{justify}
+   \item \begin{justify}
+          Los fotodiodos comunes para aplicaciones de centelladoras se fabrican usando 
+          ``obleas'' de silicio entre los $300-500$ $\mu$m.
+         \end{justify}
+   \item \begin{justify}
+          Para los fotodiodos típicos, fabricados con silicio, los niveles de ruido 
+          son mucho mayores que en los tubos FM equivalentes.
+         \end{justify}      
+   \item \begin{justify}
+          El rápido aumento en la corriente oscura (que es una fuente de ruido) 
+          a temperatura ambiente, hace que no se usen mucho los fotodiodos de silicio
+          en aplicaciones que requieren altas temperaturas. Fotodiodos existosos 
+          que permiten reducir este efecto están hechos de cristales de yoduro de 
+          mercurio.
+         \end{justify}
+  \end{itemize}
+
+ \end{exampleblock}
+
+
+ 
+ 
+\end{frame}
+
+
+
+
 
 
 \end{document}
