@@ -1578,6 +1578,115 @@ es procesada en un pre-amplificador para producir una pulso de señal de salida.
 \end{columns}
 \end{frame}
 
+\subsection{Fotomultiplicadores de silicio}
+\begin{frame}{Fotomultiplicadores de silicio - I}
+
+\begin{block}{Nota relevante}
+ \begin{justify}
+  \textbf{Modo Geiger}: Justo como en los detectores de gas, se llega a un punto en 
+  si el voltaje se aumenta lo suficiente donde el proceso de avalancha ``escapa''. Mientras 
+  nos acercamos a este valor del voltaje, las regiones de multiplicación de varios 
+  fotoelectrones comienzan a unirse en una sola avalancha. Entonces decimos que el 
+  diodo entra en modo ``Geiger'' en el cual la carga producida en la interacción inicial 
+  de fotones, es en principio, multiplicada sin límite.
+ \end{justify}
+\end{block}
+
+\begin{exampleblock}{Nota experimental}
+ \begin{itemize}
+  \item \begin{justify}
+         Los fotodiodos de avalancha en modo Geiger pueden producir un gran pulso de 
+         salida de tan solo un fotón incidente.
+        \end{justify}
+  \item \begin{justify}
+         Fotodiodos de avalancha de un solo fotón (SPAD) han sido desarrollados y mejorados 
+         las últimas décadas, y están siendo aplicados en telecomunicaciones, mediciones 
+         de tiempo de vida con fluorescencia y mediciones con láser. 
+        \end{justify}
+
+
+ \end{itemize}
+
+\end{exampleblock}
+\end{frame}
+
+
+\begin{frame}{Fotomultiplicadores de silicio - II}
+ 
+ {\large{\color{blue}Arreglos de fotodiodos de avalancha en modo Geiger}}
+ 
+ \begin{justify}
+ \small
+  Para aplicaciones normales de centelladoras en las cuales una amplificación proporcional 
+  al número original de pares de electrones-hoyos es requerida, el modo Geiger de una 
+  sola celda es de poco interés, debido a que toda la información de este número 
+  original es perdida. Por lo tanto se han desarrollado arreglos de muchos fotodiodos 
+  de avalancha en modo Geiger de pequeñas dimensiones que solucionan este problema, 
+  los cuales son conocidos como fotomultiplicadores de silicio (SiPM).
+ \end{justify}
+ 
+ \begin{block}{Nota relevante}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+          Los fotomultiplicadores de silicio son arreglos de pequeñas celdas de 
+          fotodiodos de avalancha, cada una con dimensiones de decenas de micrones, 
+          producidos usando procesos CMOS en un chip de silicio.
+         \end{justify}
+   \item \begin{justify}
+          El número de celdas que producen una avalancha es proporcional al número de 
+          fotones incidentes en el proceso de centelleo.
+         \end{justify}
+   \item \begin{justify}
+          Debido a que los detectores de centelleo producen varios miles de fotones 
+          de luz en su ventana de salida, el número de celdas debe ser un múltiplo 
+          grande del número de fotones colectado para poder hacer esto. Son comunes 
+          los arreglos de $10^4$ celdas o más por lo mismo.
+         \end{justify}
+  \end{itemize}
+
+ \end{block}
+
+\end{frame}
+
+\begin{frame}{Fotomultiplicadores de silicio - III}
+ 
+ {\large{\color{blue}Pulsos oscuros y ruido}}
+ 
+ \begin{justify}
+  Debido a que los fotodiodos de avalancha den modo Geiger son muy sensible a 
+  un solo fotoelectrón, también lo son a electrones generados térmicamente en la 
+  banda de conducción. Estos electrones llevan a eventos térmicos falsos que 
+  agregan una componente de ruido aleatorio a la señal de centelleo.
+ \end{justify}
+ 
+ \begin{columns}[c]
+ 
+ \column{2in}
+ \begin{exampleblock}{Nota experimental}
+ \small
+  \begin{itemize}
+   \item \begin{justify}
+          La tasa ``oscura'' observada en un SiPM puede ser tan grande como $10^6$
+          pulsos/s por mm$^2$ a temperatura ambiente.
+         \end{justify}
+         \item \begin{justify}
+         La mayoría de estos eventos corresponden al disparo de una sola celda. Por 
+         lo que si la medición consiste en buscar pulsos desde solo un fotón, la 
+         tasa oscura espontánea puede ser muy alta.
+         \end{justify}
+  \end{itemize}
+  
+ \end{exampleblock}
+ 
+ \column{2.3in}
+  \begin{figure}
+   \center
+   \includegraphics[scale=0.27]{fig42}
+  \end{figure} 
+  
+  
+  \end{columns}
+\end{frame}
 
 
 
