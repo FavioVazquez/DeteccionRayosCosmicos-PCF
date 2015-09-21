@@ -1688,8 +1688,322 @@ es procesada en un pre-amplificador para producir una pulso de señal de salida.
   \end{columns}
 \end{frame}
 
+\section{Análisis de la forma de los pulsos de centelleo}
+\begin{frame}
+\begin{center}
+ {\Huge{\color{blue}Análisis de la forma de los pulsos de centelleo}} \\
+ \vspace{0.5cm}
+ \includegraphics[scale=0.5]{fig43}
+\end{center}
+\end{frame}
 
+\begin{frame}{Análisis de la forma de los pulsos de centelleo - I}
+ 
+ \begin{block}{Nota relevante}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+          La forma del pulso de voltaje producido en el ánodo de un tubo FM luego de 
+          un evento de centelleo depende de la constante de tiempo del circuito del 
+          ánodo.
+         \end{justify}
+  \item \begin{justify}
+         Podemos identificar dos extremos los cuales son los más comúnmente usados 
+         con el conteo de centelleos. El primero corresponde a situaciones en la 
+         cual la constante de tiempo es seleccionada de manera tal que es \textbf{grande} 
+         comparada con el tiempo de decaimiento de la centelladora. El otro extremo 
+         se obtiene ajustando la constante de tiempo para que sea mucho \textbf{menor} 
+         que el tiempo de decaimiento de la centelladora.
+        \end{justify}
+
+  \end{itemize}
+
+ \end{block}
+\end{frame}
+
+\begin{frame}{Análisis de la forma de los pulsos de centelleo - II}
+ 
+ El circuito del ánodo puede ser idealizado como en la figura de abajo.
+ 
+ \begin{columns}[c]
+
+\column{2in}
+ \begin{figure}
+  \center 
+  \includegraphics[scale=0.5]{fig44}
+ \end{figure}
+ 
+ \column{2in}
+ 
+ \begin{justify}
+  $C$ representa la capacitancia del ánodo, más la capacitancia del cable conector 
+  y la capacitancia de entrada del circuito al cual el ánodo está conectado. La 
+  resistencia de carga $R$ puede ser una resistencia física conectada a 
+  la basa del tubo, o, a la impedancia del circuito conectado. La corriente que 
+  fluye por el ánodo $i(t)$ es simplemente la corriente de electrones de un pulso 
+  simple, supuesto a comenzar en $t=0$.
+ \end{justify}
+ \end{columns}
+\end{frame}
+
+\begin{frame}{Análisis de la forma de los pulsos de centelleo - III}
+ 
+ \begin{justify}
+ La forma de $i(t)$ influenciará la forma del pulso de voltaje del ánodo, y para 
+ el análisis breve que haremos, utilizaremos una representación simplificada 
+ de un pulso de electrones típico luego de un evento de centelleo. La componente 
+ principal de la luz emitida en la mayoría de las centelladoras puede ser 
+ representada como un simple decaimiento exponencial.
+ 
+ \vspace{.3cm}
+ 
+ Si el esparcimiento del tiempo de tránsito del tubo FM es pequeño comparado con 
+ este tiempo de decaimiento, entonces un modelo realista de la corriente de electrones 
+ que llega al ánodo del tubo FM es simplemente
+ 
+ \begin{equation}
+  i(t) = i_0e^{-\lambda t},
+ \end{equation}
+ 
+ donde $\lambda$ es la constante de decaimiento de la centelladora. La corriente 
+ inicial $i_0$puede representarse en términos de la carga total $Q$ colectada 
+ sobre el pulso entero como $i_0 = \lambda Q$, por lo tanto
+ 
+ \begin{equation}
+  i(t) = \lambda Q e^{-\lambda t}
+ \end{equation}
+ \end{justify}
+ 
+\end{frame}
+
+\begin{frame}{Análisis de la forma de los pulsos de centelleo - IV}
+ 
+ \begin{justify}
+ Para derivar el pulso de voltaje $V(t)$ esperado en el ánodo, notamos que la 
+ corriente que fluye al circuito paralelo $RC$ debe ser la suma de la corriente 
+ que fluye a la capacitancia $i_C$ y la corriente sobre la resistencia $i_R$, 
+ $i(t) = i_C + i_R$. Luego de unas sustituciones y trabajando sobre las anteriores 
+ ecuaciones llegamos a una ecuación diferencial de primer orden no homogénea con 
+ condición inicial $V(0) = 0$, cuya solución es 
+ 
+ \begin{equation}
+  V(t) = \frac{1}{\lambda - \theta}\frac{\lambda Q}{C}(e^{-\theta t} - e^{- \lambda t}),
+ \end{equation}
+
+ donde $\theta \equiv 1/(RC)$ es el recíproco la constante de tiempo del ánodo.
+ 
+ \end{justify}
+\end{frame}
+
+\subsection{Caso 1. Constante de tiempo grande}
+
+\begin{frame}{Constante de tiempo grande - I}
+ 
+ Si la constante de tiempo se hace grande comparada con el tiempo de de decaimiento de 
+ la centelladora, entonces $\theta << \lambda$, y tenemos entonces que 
+ 
+ \begin{equation}
+  V(t) \cong \frac{Q}{C}(e^{-\theta t} - e^{-\lambda} t)
+ \end{equation}
+ 
+ Debajo se muestra este pulso graficado. 
+
+ \begin{columns}[c]
+ 
+ \column{2in}
+ 
+ \begin{figure}
+  \center
+  \includegraphics[scale=0.3]{fig45}
+  \end{figure}
+
+ 
+ \column{2in}
+  El comportamiento a valores pequeños de $t$ es ahora
+  
+  \begin{equation*}
+   V(t) = \frac{Q}{C}(1 - e^{-\lambda t}), \quad \left(t \ll \frac{1}{\theta} \right)
+  \end{equation*}
+  
+  y para $t$ grande 
+  
+  \begin{equation*}
+   V(t) = \frac{Q}{C}e^{-\theta t}, \quad \left(t \gg \frac{1}{\lambda} \right)
+  \end{equation*}
+ 
+ \end{columns}
+
+\end{frame}
+
+\begin{frame}{Constante de tiempo grande - II}
+ 
+ Las siguientes observaciones importantes pueden hacerse,
+ 
+ \begin{block}{Nota relevante}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+          La parte principal del pulso tiene un comportamiento temporal $(1-e^{-\lambda t})$ 
+          y su tiempo de subida es determinado por la la constante de decaimiento de 
+	  la centelladora $\lambda$. Las centelladoras rápidas tienen valores grandes 
+	  de $\lambda$ que llevan a pulsos que suben rápidamente.
+         \end{justify}
+   \item \begin{justify}
+          La cola del pulso tiene un comportamiento temporal $e^{-\theta t}$ y por 
+          lo tanto decae a una tasa determinada por la constante temporal del 
+          circuito del ánodo $RC \equiv 1/\theta$.
+         \end{justify}
+     \item \begin{justify}
+          La amplitud del pulso está dada simplemente por $Q/C$, pero este valor 
+          es alcanzado solo si $\theta \ll \lambda$. Es decir, como hemos establecido, 
+          la constante de tiempo del circuito debe ser más grande que el tiempo de 
+          decaimiento de la centelladora.
+         \end{justify}      
+  \end{itemize}
+ \end{block}
+\end{frame}
+
+\begin{frame}{Constante de tiempo grande - III}
+ 
+ \begin{exampleblock}{Nota experimental}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+          La mayoría de la cuenta de centelladoras se hace en este modo debido a 
+          que la altura del pulso es maximizada y las fuentes subsecuentes de ruido 
+          tendrán un efecto degradante mínimo en la resolución de altura del pulso.
+          \end{justify}
+   \item \begin{justify}
+	  La amplitud del pulso conseguida no es sensible a cambios en la resistencia 
+	  de carga o a cambios pequeños en los tiempos característicos del pulso 
+	  de electrones.
+         \end{justify}
+   \item \begin{justify}
+          El usuario debe escoger una constante de tiempo al menos unas $5-10$ veces 
+          más grande que el tiempo de decaimiento de la centelladora pero que no sea
+          excesivamente grande para prevenir un apilado innecesario de la cola de 
+          un pulso precedente. 
+         \end{justify}      
+  \end{itemize}
+ \end{exampleblock}
+\end{frame}
+
+\subsection{Caso 2. Constante de tiempo pequeña}
+
+\begin{frame}{Constante de tiempo pequeña - I}
+En el extremo opuesto, la constante de tiempo del ánodo se hace pequeña comparada 
+con el tiempo de decaimiento de la centelladora, o $\theta >> \lambda$, entonces 
+
+\begin{equation}
+ V(t) \approx \frac{\lambda}{\theta}\frac{Q}{C}(e^{-\lambda t} - e^{-\theta t})
+\end{equation}
+
+Debajo se muestra este pulso graficado. 
+
+  \begin{columns}[c]
+  
+ \column{2in}
+ 
+\begin{figure}
+  \center
+  \includegraphics[scale=0.37]{fig46}
+  \end{figure}
+
+
+ \column{2in}
+  El comportamiento a valores pequeños de $t$ es ahora
+  
+  \begin{equation*}
+   V(t) = \frac{\lambda}{\theta}\frac{Q}{C}(1 - e^{-\theta t}), \quad \left(t \ll \frac{1}{\lambda} \right)
+  \end{equation*}
+  
+  y para $t$ grande 
+  
+  \begin{equation*}
+   V(t) = \frac{\lambda}{\theta}\frac{Q}{C}e^{-\lambda t}, \quad \left(t \gg \frac{1}{\theta} \right)
+  \end{equation*}
+ 
+ \end{columns}
+\end{frame}
+
+\begin{frame}{Constante de tiempo pequeña - II}
+ 
+ Las siguientes conclusiones generales ahora aplican,
+ 
+ \begin{block}{Nota relevante}
+  \begin{itemize}[<+->]
+   \item \begin{justify}
+          La parte principal del pulso tiene un comportamiento temporal $(1 - e^{-\theta t})$, 
+          que está determinado por la constante de tiempo del ánodo $RC \equiv 1\theta$.
+         \end{justify}
+   \item \begin{justify}
+          La cola del pulso tiene comportamiento temporal $e^{-\lambda t}$, el cual 
+          es idéntico al de la luz de centelleo.
+         \end{justify}
+     \item \begin{justify}
+          La amplitud máxima del pulso es ahora $(\lambda Q/\theta C)$, mucho más 
+          pequeña que en el caso 1, en el cual el máximo era $(Q/C)$, porque por 
+          definición para el caso 2 $\lambda \ll \theta$.
+         \end{justify}      
+  \end{itemize}
+ \end{block}
+\end{frame}
+
+\begin{frame}{Consideraciones un poco más realistas}
+
+\begin{justify}
+\small
+El modelo simplificado que hemos usado asume una corriente $i(t)$ continua y suave, 
+no representa la naturaleza ``agrupada'' de la corriente que surge últimamente 
+del ánodo de fotoelectrones discretos. En el caso 1, los efectos de discreción 
+son muy suavizados por el proceso de integración de corrientes que se hace. En el 
+caso 2, no se hace ninguna integración y el pulso es mucho más sensible a fluctuaciones 
+que se originan de la naturaleza estadística de la producción de fotoelectrones. Estas 
+fluctuaciones en la forma del pulso y la amplitud son muy significantes para los eventos 
+de centelleo débiles, que producen solo un pequeño número de fotoelectrones.
+\end{justify}
+
+\begin{figure}
+ \center
+ \includegraphics[scale=0.38]{fig47}
+\end{figure}
+\end{frame}
+
+\section{Algunas cosas de las que no hablaré pero que valen la pena leer}
+
+\begin{frame}
+\begin{center}
+ {\Huge{\color{blue}Algunas cosas de las que no hablaré pero que valen la pena leer}} \\
+ \vspace{0.5cm}
+ \includegraphics[scale=0.5]{fig43}
+\end{center}
+\end{frame}
+
+\begin{frame}{Algunas cosas de las que no hablaré pero que valen la pena leer}
+ \begin{itemize}
+ \item \begin{justify}
+        \textbf{Tubos FM híbridos}: La estructura fotomultiplicadora es reemplazada 
+        por un detector de silicio. Uno de los beneficios más importantes es que 
+        tienen un comportamiento estadístico superior de la amplificación  y 
+        permiten separar eventos correspondientes a un solo fotoelectrón de 
+        los eventos correspondientes a muchos fotoelectrones.
+       \end{justify}
+ \item \begin{justify}
+        \textbf{Tubos FM detectores de posición}: Tubos FM que proveen información 
+        de la posición de la luz incidente. Usan estructuras multiplicadoras que mantienen 
+        la separación espacial entre las nubes de electrones que se originan de 
+        los fotoelectrones generados en lugares separados del fotocátodo. También utilizan 
+        dínodos especializados.
+       \end{justify}
+  \item \begin{justify}
+        \textbf{Detectores de fotoionización}: Funcionan en el rango de la luz 
+        ultravioleta. Vapor orgánico se incorpora como un componente del gas que 
+        llena un detector convencional sensible a la ionización, entonces la amplitud 
+        de la señal del pulso reflejará el número de fotones incidentes que se han 
+        convertido en iones. Comúnmente se usan con tubos FM detectores de posición.
+       \end{justify}
+\end{itemize}
+\end{frame}
 
 
 
 \end{document}
+
+
