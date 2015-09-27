@@ -10,6 +10,7 @@
 \usepackage{marvosym}
 \usepackage{mathtools}
 \usepackage{mdframed}
+\usepackage{hologo}
 \renewcommand{\figurename}{Figura}
 \usetheme{Warsaw}
 
@@ -41,7 +42,7 @@
 
 \begin{frame}
 \Large
-\title{Tubos fotomultiplicadores y fotodiodos}
+\title{Tubos fotomultiplicadores (FM) y fotodiodos}
 \author{Favio Vázquez}
 \date{$29$ de septiembre de 2015}
 
@@ -57,8 +58,46 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
 \end{frame}
 
 \section{Introducción}
+
 \begin{frame}[allowframebreaks]{Introducción}
+
 \begin{justify}
+ 
+ Las láminas de la presentación están disponibles en GitHub junto con el código en \hologo{LaTeX}
+ en el siguiente \href{https://github.com/FavioVazquez/DeteccionRayosCosmicos-PCF}{\color{blue} link}.
+ También están todas las imágenes y contenido de la misma.
+ 
+ \vspace{.3cm}
+ 
+ En la presentación, las notas relevantes se encontrarán adentro de cajas azules como esta:
+ 
+ \begin{block}{Nota relevante}
+ \begin{justify}
+  Nota súper importante que te cambiará la vida de aspecto teórico o sólo un 
+  punto a resaltar.
+  \end{justify}
+ \end{block}
+ 
+ Y las notas experimentales, se encontrarán adentro de cajas verdes como esta:
+ 
+ \begin{exampleblock}{Nota experimental}
+ \begin{justify}
+  Nota súper interesante e importante de corte experimental que te hará el mejor 
+  físico experimental de la vida. Acá también se encontrarán cosas relacionadas 
+  a seguridad y buen manejo de equipos así que presta atención.
+  \end{justify}
+ \end{exampleblock}
+ 
+\end{justify}
+
+\framebreak
+
+\begin{justify}
+
+\begin{columns}[c]
+ 
+ \column{2.2in}
+ \begin{justify}
  El uso masivo de la cuenta de centelladores en la detección y espectroscopia sería 
  imposible sin la disponibilidad de dispositivos que nos permitiera convertir la 
  salida de luz débil de un pulso de centellador, en una señal eléctrica medible. 
@@ -68,7 +107,16 @@ Láminas disponibles en \href{https://github.com/FavioVazquez/DeteccionRayosCosm
  Los tubos fotomultiplicadores (FM) cumplen con esta tarea muy bien, convirtiendo señales 
  de luz que constan típicamente de no más que unos cientos de fotones, en un pulso 
  de corriente utilizable sin añadir una gran cantidad de ruido aleatorio a la señal.
+ \end{justify}
+ \column{2in}
  
+ \begin{figure}
+  \center 
+  \includegraphics[scale=0.83]{fig0}
+ \end{figure}
+
+ 
+ \end{columns}
 \framebreak
 
  Existe una gran variedad comercial de estos tubos sensibles a diversas longitudes de onda,
@@ -1489,7 +1537,7 @@ es procesada en un pre-amplificador para producir una pulso de señal de salida.
    \item \begin{justify}
           El rápido aumento en la corriente oscura (que es una fuente de ruido) 
           a temperatura ambiente, hace que no se usen mucho los fotodiodos de silicio
-          en aplicaciones que requieren altas temperaturas. Fotodiodos existosos 
+          en aplicaciones que requieren altas temperaturas. Fotodiodos exitosos 
           que permiten reducir este efecto están hechos de cristales de yoduro de 
           mercurio.
          \end{justify}
@@ -1688,16 +1736,16 @@ es procesada en un pre-amplificador para producir una pulso de señal de salida.
   \end{columns}
 \end{frame}
 
-\section{Análisis de la forma de los pulsos de centelleo}
+\section{Análisis de la forma de los pulsos de centelladores}
 \begin{frame}
 \begin{center}
- {\Huge{\color{blue}Análisis de la forma de los pulsos de centelleo}} \\
+ {\Huge{\color{blue}Análisis de la forma de los pulsos de centelladores}} \\
  \vspace{0.5cm}
  \includegraphics[scale=0.5]{fig43}
 \end{center}
 \end{frame}
 
-\begin{frame}{Análisis de la forma de los pulsos de centelleo - I}
+\begin{frame}{Análisis de la forma de los pulsos de centelladores - I}
  
  \begin{block}{Nota relevante}
   \begin{itemize}[<+->]
@@ -1720,7 +1768,7 @@ es procesada en un pre-amplificador para producir una pulso de señal de salida.
  \end{block}
 \end{frame}
 
-\begin{frame}{Análisis de la forma de los pulsos de centelleo - II}
+\begin{frame}{Análisis de la forma de los pulsos de centelladores - II}
  
  El circuito del ánodo puede ser idealizado como en la figura de abajo.
  
@@ -1745,7 +1793,7 @@ es procesada en un pre-amplificador para producir una pulso de señal de salida.
  \end{columns}
 \end{frame}
 
-\begin{frame}{Análisis de la forma de los pulsos de centelleo - III}
+\begin{frame}{Análisis de la forma de los pulsos de centelladores - III}
  
  \begin{justify}
  La forma de $i(t)$ influenciará la forma del pulso de voltaje del ánodo, y para 
@@ -1775,7 +1823,7 @@ es procesada en un pre-amplificador para producir una pulso de señal de salida.
  
 \end{frame}
 
-\begin{frame}{Análisis de la forma de los pulsos de centelleo - IV}
+\begin{frame}{Análisis de la forma de los pulsos de centelladores - IV}
  
  \begin{justify}
  Para derivar el pulso de voltaje $V(t)$ esperado en el ánodo, notamos que la 
