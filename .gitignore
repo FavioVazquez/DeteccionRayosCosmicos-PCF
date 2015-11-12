@@ -1,7 +1,6 @@
 #Ignore output files
 
 *.log
-*.pdf
 *.aux
 *.backup
 *.out
