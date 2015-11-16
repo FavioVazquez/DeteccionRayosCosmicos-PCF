@@ -140,7 +140,7 @@ de rayos cósmicos y, de acuerdo a su origen, pueden ser categorizados en:
  modelos teóricos y numéricos, predicen que están compuestos en su mayoría 
  de protones, pero algunos han teorizado que pueden estar compuestos por 
  partículas y entidades generadas en el universo muy temprano como del 
- decaimiento de partículas súper pesadas o defectos topológicos \cite{}.
+ decaimiento de partículas súper pesadas o defectos topológicos \cite{nagano}.
 \end{itemize}
 
 Los rayos cósmicos pueden ser usados como fuentes de partículas de altas energías 
@@ -311,11 +311,64 @@ se utilizan para estudiar los rayos cósmicos.
 Es muy extenso el material que existe y que se puede recopilar sobre detectores de 
 rayos cósmicos pero sale del objetivo de este informe. Solo se hará un resumen de los 
 detectores y aparatos que se usaron en el laboratorio para las distintas mediciones 
-que se hicieron.
+que se hicieron. En la subsección \eqref{ss:materialesutilizados} está una lista de 
+todos los materiales utilizados para hacer las prácticas, ahora detallaremos brevemente
+algunos de los equipos que usamos para hacer las mediciones.
+
+\begin{itemize}
+ \item \textbf{Centellador}: El centellador como su nombre lo indica centellea o exhibe 
+ luminiscencia cuando por el pasa una partícula altamente energética. Este proceso
+ se basan en la excitación atómica molecular, esto se produce cuando una partícula 
+ muy  energética pero no cargada pasa a través del plástico centellador  y 
+ este absorbe parte de la energía de la partícula incidente provocando una excitación
+ a los electrones de la banda de valencia  hacia la banda de conducción, en cualquier 
+ estado de activación cada electrón regresa a su estado base emitiendo un fotón de
+ energía exactamente igual a la necesaria para pasar de su estado fundamental a su
+ estado excitado la des-excitación causa la emisión de la luz en un proceso
+ conocido como fluorescencia. Comúnmente están hechos de materiales orgánicos 
+ o inorgánicos, los primeros se usan más para detecciones en el rango ultravioleta 
+ y los inorgánicos para luz visible.
+ \item \textbf{Guía de luz}: La guía de luz sirve para dirigir el camino de los fotones
+ desde el centellador hasta el tubo fotomultiplicador. 
+ \item \textbf{Tubo fotomultiplicador}: Los tubos fotomultiplicadores convierten 
+ señales de luz provenientes de os centelladores que constan típicamente de no más 
+ que unos cientos de fotones, en un pulso  de corriente utilizable sin añadir una 
+ gran cantidad de ruido aleatorio a la señal.Los dos mayores componentes dentro del 
+ tubo son una capa fotosensible, llamada  el \emph{fotocátodo}, acoplado a una 
+ \emph{estructura multiplicadora de fotones}.  El fotocátodo sirve para convertir la
+ mayor cantidad posible de fotones de luz  en electrones de baja energía. La sección
+ de multiplicadora de electrones en un tubo fotomultiplicador provee una geometría
+ de colección eficiente para los fotoelectrones, y sirve como un amplificador
+ casi ideal para incrementar en altas cantidades su número. Luego de una 
+ amplificación a través de la estructura multiplicadora, un pulso típico de
+ centellador dará lugar a unos $10^7-10^{10}$ electrones \cite{knoll}, suficientes
+ para servir de señal de carga para el evento original de centelleo. Esta carga
+ es colectada convencionalmente en el ánodo o la etapa de salida de la estructura
+ multiplicadora.
+ \item \textbf{Discriminador}: Es un dispositivo que responde solamente a señales 
+ de entrada con una altura de pulso mayor que cierto valor umbral. Si se satisface 
+ este criterio, el discriminador responde emitiendo una señal lógica estándar, sino, 
+ no hay ninguna respuesta. El principal uso para los discriminadores es bloquear 
+ ruidos de baja amplitud desde los fotomultiplicadores u otros detectores \cite{leo}. Los 
+ buenos pulsos son convertidos por una electrónica en pulsos lógicos, utilizando 
+ un convertidor analógico-digital.
+ \item \textbf{Compuerta AND}: Es una puerta lógica digital que implementa la
+ conjunción lógica $-$ se comporta de acuerdo a la tabla de verdad mostrada a la 
+ derecha. Ésta entregará una salida ALTA (1), dependiendo de los valores de las 
+ entradas, siendo este caso, al recibir solo valores altos en ambas entradas. Si 
+ alguna de estas entradas no son ALTAS, entonces se mostrará un valor de salida 
+ BAJA (0). En otro sentido, la función de la compuerta AND efectivamente encuentra 
+ el mínimo entre dos dígitos binarios, así como la función OR encuentra el máximo.
+ Por lo tanto, la salida X solamente es ``1'' (1 lógico, nivel alto) cuando la entrada
+ A como la entrada B están en ``1''. En otras palabras la salida X es igual a 1 cuando
+ la entrada A y la entrada B son 1.
+\end{itemize}
+
 
 \section{Metodología Experimental}
 
 \subsection{Materiales utilizados}
+\label{ss:materialesutilizados}
 
 A continuación se listan los materiales que fueron utilizados para las distintas mediciones:
 
@@ -333,8 +386,6 @@ A continuación se listan los materiales que fueron utilizados para las distinta
 
 
 \subsection{Medición del punto de operación}
-
-
 
 Se utilizó un arreglo de centelladores, llamado arreglo de coincidencias, con el cual se desea medir el punto de operación del sistema, y el rango de operación del mismo, 
 lo cual nos servirá para mediciones posteriores. A continuación se describen los 
@@ -375,6 +426,29 @@ de la misma manera que en la sección anterior. Se fue girando el dispositivo ca
 10 grados, partiendo de $0^\circ$ hasta $90^\circ$, y se anotó el número de cuentas 
 de muones para cada ángulo en un tiempo de 5 minutos por medición, en la sección
 de resultados se encuentran estos datos tabulados y graficados.
+
+\subsection{Medición de la Atenuación de Muones mediante el uso de plomo}
+
+En esta sección el objetivo principal es cuantificar la atenuación de muones en 
+función de la densidad del material utilizado para atenuar, en este caso el plomo, 
+y la distancia entre las paletas. Se conectaron los cables de la misma manera que en
+las secciones anteriores, se fija un voltaje de 740 V consistente con el punto de 
+operación, y antes de comenzar las 
+mediciones se comprobó que hubiera coincidencia, y se hicieron mediciones para saber
+si el aparato experimental se encontraba calibrado. Se acomodaron los bloques de plomo 
+de tal manera que se forma una estructura que tenga un lado abierto y la parte 
+superior descubierta, por el cual se introdujo una de las paletas. Para tener un 
+punto de referencia, se colocó un bloque de hule espuma sobre la estructura de plomo,
+y la segunda paleta sobre este bloque, cuidando que la segunda se encontrara 
+exactamente sobre la primera, de modo que se tenga coincidencia, habiendo una 
+distancia de 21 cm entre las paletas. Se utilizó hule espuma, debido a su baja 
+densidad y gracias a esta propiedad se puede tomar como referencia. Se anotó el 
+número de cuentas cada cinco minutos. Posteriormente se sustituyó el bloque de hule
+espuma, por un bloque de plomo, se acomodaron las paletas de la misma manera a 21 cm
+y se realizó la misma medición. El plan siguiente es ir aumentando el número de bloques de tal
+manera que la atenuación aumente hasta dejar de tener cuentas en un tiempo dado. 
+Se harán las mediciones primero con hule espuma para tener una referencia y
+posteriormente se sustituyen con plomo.
 
 \section{Resultados}
 
@@ -418,8 +492,15 @@ y por lo tanto tomamos el punto de operación como 740 V.
 \bibitem{mok}
 H. Mok, \emph{Cosmic Rays: Climate, Weather and Applications}, Nova Publishers, 
 2012.
+\bibitem{nagano}
 M. Nagano y A. Watson, \emph{Observations and implications of the ultrahigh-energy 
 cosmic rays}, Reviews of Modern Physics \textbf{72}, pp. 689-732.
+\bibitem{knoll}
+G. Knoll, \emph{Radiation Detection adn Measurement}, 4ta edición, John Wiley \& Sons,
+2010.
+\bibitem{leo}
+W. Leo, \emph{Techniques for nuclear and particle physics experiments: a how to 
+approach}, 2da edición, Springer-Verlang, 1987.
 \end{thebibliography}
 
 
