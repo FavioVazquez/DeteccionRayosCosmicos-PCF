@@ -431,7 +431,11 @@ de resultados se encuentran estos datos tabulados y graficados.
 
 En esta sección el objetivo principal es cuantificar la atenuación de muones en 
 función de la densidad del material utilizado para atenuar, en este caso el plomo, 
-y la distancia entre las paletas. Se conectaron los cables de la misma manera que en
+y la distancia entre las paletas. 
+
+\vspace{.3cm}
+
+Se conectaron los cables de la misma manera que en
 las secciones anteriores, se fija un voltaje de 740 V consistente con el punto de 
 operación, y antes de comenzar las 
 mediciones se comprobó que hubiera coincidencia, y se hicieron mediciones para saber
@@ -464,11 +468,10 @@ partiendo de 650 V a 850 V, subiendo de el voltaje de 20 en 20.
 \begin{table}[H]
 \centering
 \caption{Mediciones a distintos voltajes para el flujo de muones}
-\label{my-label}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
-Voltaje & Medicion1 & Medicion2 & Medicion3 & Medicion4 & Medicion5 & Promedio & Error \\ \hline
+Voltaje & Medición 1 & Medición 2 & Medición 3 & Medición 4 & Medición 5 & Promedio & Error \\ \hline
 650 & 90 & 89 & 91 & 104 & 90 & 92.8 & 6.3 \\ \hline
 670 & 133 & 113 & 130 & 135 & 123 & 126.8 & 8.9 \\ \hline
 690 & 135 & 138 & 147 & 146 & 133 & 139.8 & 6.3 \\ \hline
@@ -483,10 +486,109 @@ Voltaje & Medicion1 & Medicion2 & Medicion3 & Medicion4 & Medicion5 & Promedio &
 \end{tabular}}
 \end{table}
 
+\begin{figure}[H]
+ \center 
+ \includegraphics[scale=0.45]{atenuacionMuones1}
+ \caption{Distribución angular de muones y curva de mejor ajuste.}
+\end{figure}
+
 De la anterior gráfica observamos que el rango de operación está entre 690 V y 770 V,
 y por lo tanto tomamos el punto de operación como 740 V. 
 
 \subsection{Medición de la distribución angular de los muones}
+
+Debajo se muestra la tabla de datos registrados para la medición de distribución 
+angular de los muones,
+
+\begin{table}[H]
+\centering
+\caption{Mediciones a distintos ángulos para el flujo de muones}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+Ángulo & Medición 1 & Medición 2 & Medición 3 & Promedio & Error \\ \hline
+0      & 48        & 42        & 42        & 44.0     & 3.4   \\ \hline
+10     & 39        & 31        & 42        & 37.3     & 5.6   \\ \hline
+20     & 31        & 37        & 38        & 35.3     & 3.7   \\ \hline
+30     & 23        & 30        & 34        & 29.0     & 5.5   \\ \hline
+40     & 27        & 23        & 24        & 24.6     & 2.0   \\ \hline
+50     & 24        & 21        & 23        & 22.6     & 1.5   \\ \hline
+60     & 16        & 14        & 14        & 14.6     & 1.1   \\ \hline
+70     & 11        & 11        & 7         & 9.6      & 2.3   \\ \hline
+80     & 4         & 6         & 3         & 4.3      & 1.5   \\ \hline
+90     & 5         & 4         & 4         & 4.3      & 0.5   \\ \hline
+\end{tabular}
+\end{table}
+
+Notamos una caída conforme nos acercamos a los 90$^\circ$  pues al estar las paletas en 
+los 0$^\circ$ (en el zenit) el numero de cuentas es mayor ya que los muones procedentes 
+de los rayos cósmicos caen directamente sobre las  paletas y conforme no vamos moviendo  
+a los 90$^\circ$  el número de cuentas disminuye  ya que las partículas
+interaccionan con otras(presentes en el ambiente) antes de  llegar a las paletas y 
+así de esta manera las partículas que pasan a través de las paletas  son mucho menor. 
+Debajo se encuentra graficada esta tabla y el mejor ajuste que será discutido a continuación,
+
+\begin{figure}[H]
+ \center 
+ \includegraphics[scale=0.5]{ajusteAngulos}
+ \caption{Distribución angular de muones y curva de mejor ajuste.}
+ \label{fig:ajusteAngulos}
+\end{figure}
+
+Junto con los puntos y las barras de error se encuentra la línea de mejor ajuste. Crookes 
+y Rastin en 1972 \cite{crookes} determinaron que la distribución del flujo es proporcional 
+a $\cos^{2.16}{\theta}$, donde $\theta$ es el ángulo medido con respecto al zenit. La 
+ecuación completa para el flujo a diferentes ángulos es 
+
+\begin{equation}
+ F(\theta) = F_v\cos^{2.16}{\theta},
+\end{equation}
+
+donde $F_v$ es el flujo vertical. Este parámetro se ajusta dependiendo del ángulo 
+sólido sobre el cual se hacen las mediciones y la ventana de tiempo en la que se 
+hace la medición. En nuestro caso el mejor ajuste, que es la línea azul sólida 
+en la figura \eqref{fig:ajusteAngulos} fue de 
+
+\begin{equation}
+  F(\theta) = 40\cos^{2.16}{\theta},
+\end{equation}
+
+con lo cual hemos demostrado experimentalmente lo predicho por la teoría, claro 
+con ciertos errores visibles en las barras de error entre los 10 y 30 grados.
+
+
+
+\subsection{Medición de la Atenuación de Muones mediante el uso de plomo}
+
+En esta sección no tenemos muchos resultados que mostrar debido a que solo se ha 
+comenzado a hacer las mediciones. Solo se ha hecho una medición en el vacío y 
+una con plomo y debajo se muestran estos puntos.
+
+\begin{table}[H]
+\centering
+\caption{Medición en el vacío.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+Distancia & \#1 & \#2 & \#3 & \#4 & \#5 & Promedio & Error \\ 
+\hline 
+21 cm & 14 & 12 & 10 & 13 & 10 & 11.8 &  1.78 \\ 
+\hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Medición con plomo.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+Distancia & \#1 & \#2 & \#3 & \#4 & \#5 & \#6 & \#7 & Promedio & Error \\ 
+\hline 
+21 cm & 6 & 8 & 9 & 6 & 8 & 9 & 9 & 7.8 & 1.3 \\ 
+\hline 
+\end{tabular}
+\end{table}
+
+Claramente esperamos ver más atenuación mientras más plomo se le agregue al arreglo, 
+y es la medición que falta por realizar.
 
 \begin{thebibliography}{10}
 \bibitem{mok}
@@ -501,6 +603,9 @@ G. Knoll, \emph{Radiation Detection adn Measurement}, 4ta edición, John Wiley \
 \bibitem{leo}
 W. Leo, \emph{Techniques for nuclear and particle physics experiments: a how to 
 approach}, 2da edición, Springer-Verlang, 1987.
+\bibitem{crookes}
+J. Crookes y B. Rastin, \emph{An Investigation of the Absolute Intensity of Muons at Sea Level}, 
+Nucl Phys B \textbf{39}, p. 493, 1972.
 \end{thebibliography}
 
 
