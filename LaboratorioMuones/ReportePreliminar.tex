@@ -20,6 +20,7 @@
 \usepackage[titletoc,toc,title]{appendix}
 \usepackage{enumitem}
 \usepackage{etoolbox}
+\usepackage{authblk} %multiple authors
 \usetikzlibrary{calc}
 \numberwithin{equation}{section}
 
@@ -76,38 +77,84 @@
 \title{{\huge Reporte Preliminar} \\
 \vspace{.2cm}
 \large Laboratorio Avanzado - Detección de Rayos Cósmicos}
-\author{Favio Vázquez\thanks{Correo: favio.vazquezp@gmail.com}\affil{Instituto de Ciencias Nucleares. Universidad Nacional Autónoma de México.},
-Susana Marín\thanks{Correo: susyma3005@gmail.com}\affil{Instituto de Química. Universidad Nacional Autónoma de México.}}
+
+\author[1]{Favio Vázquez\footnote{\url{favio.vazquezp@gmail.com}}}
+\author[2]{Susana Marín\footnote{\url{susyma3005@gmail.com}}}
+
+\affil[1]{Instituto de Ciencias Nucleares,
+Universidad Nacional Autónoma de México}
+\affil[2]{Instituto de Química,
+Universidad Nacional Autónoma de México}
+
 \date{}
 
 \begin{document}
 
-\makeatletter
-\def\@maketitle{%
-  \newpage
-  \null
-  \vskip 2em%
-  \begin{center}%
-  \let \footnote \thanks
-    {\Large\bfseries \@title \par}%
-    \vskip 1.5em%
-    {\normalsize
-      \lineskip .5em%
-      \begin{tabular}[t]{c}%
-        \@author
-      \end{tabular}\par}%
-    \vskip 1em%
-    {\normalsize \@date}%
-  \end{center}%
-  \par
-  \vskip 1.5em}
-\makeatother
-
 \maketitle
 
-\section{Introducción}
+\section*{Introducción}
+
+Los rayos cósmicos fueron descubiertos por el físico Austríaco-Americano, Víctor
+Hess. En 1912, Hess estableció que la ionización atmosférica aumenta con la
+altitud, y concluyó que la “radiación” que la origina debía proceder del espacio
+exterior lo que le valió el premio Nobel de Física del año 1936. En años posteriores
+los rayos cósmicos fueron estudiados utilizando cámaras de destellos que permiten 
+trazar la trayectoria y distinguir entre diferentes tipos de partículas cargadas que,
+ya que éstas, en presencia de un campo magnético, son desviadas de una trayectoria
+recta. Lo mismo ocurre con los rayos cósmicos durante su propagación hasta la 
+tierra, y por lo tanto no son convenientes para las observaciones astronómicas. 
+
+\vspace{.3cm}
+
+Desde su descubrimiento se han hecho una gran cantidad de experimentos y grandes 
+colaboraciones para estudiar las propiedades y la naturaleza de los rayos cósmicos. 
+Hoy en día tenemos una gran idea de sus características y origen, la teoría 
+más aceptada dice que los rayos cósmicos están compuestos por partículas cargadas 
+estables, fotones y núcleos atómicos con tiempos de vida de al rededor de 
+$10^6$ años o más. Técnicamente, podemos hablar que los rayos cósmicos primarios, 
+están compuestos por partículas aceleradas desde fuentes astrofísicas y los secundarios 
+son las partículas producidas en la interacción con las partículas de la atmósfera 
+al llegar a la tierra. Sabemos que algunos provienen de adentro del sistema solar, 
+otros de algún lugar de la galaxia y algunos pocos de afueras de nuestra galaxia. Pero 
+el fenómeno físico completo aún no es entendido por completo, desde teorías muy plausibles 
+y conservadoras, así como más radicales y exóticas se han propuesto para explicar 
+el origen físico de los rayos cósmicos, y si lo que hoy en día sabemos es correcto, pero 
+aún no hay un consenso completo sobre el tema. Es probable que con las nuevas mediciones 
+de algunos grandes observatorios de rayos cósmicos comencemos a tener una mejor idea 
+sobre la respuesta a estas preguntas, pero por ahora solo podemos mantenernos en espera 
+y utilizar los resultados que se han obtenido hasta ahora.
+
+\vspace{.3cm}
+
+En este informe preliminar de laboratorio se muestran los resultados y breves análisis 
+de los experimentos que hemos realizado. Dejamos para el segundo, y final informe una 
+conclusión y análisis un poco más detallados de los resultados que se obtendrán y de 
+los que ya se han obtenido. Hasta el momento hemos completado 2 experimentos, 
+el primero era la medición del punto de operación del sistema que utilizaremos 
+para el resto del laboratorio \eqref{ss:medicionoperacion}, en el cual se hicieron mediciones de muones atmosféricos 
+\eqref{ss:componentemuonica} a distintos voltajes, para determinar en qué rango 
+de operación se encuentra el plató en el cual el sistema es estable, así como 
+el punto medio del rango que tomamos como el punto de operación del sistema. El otro experimento 
+completo consistió en determinar la distribución angular de los muones \eqref{ss:medicionangulos} y utilizando 
+el punto de operación obtenido anteriormente, se quería validar que el sistema 
+cumplía con las expectativas teóricas para la distribución del flujo a distintos 
+ángulos, así como el porcentaje de muones que llegan a distintos ángulos al 
+laboratorio. La medición que falta por completar es la atenuación de muones con 
+placas de plomo \eqref{ss:medicionplomo}, en la cual el plan es calcular cuánto afecta una cantidad dada 
+de plomo, en atenuación, al flujo de muones que llegan al sistema.
+
+\vspace{.3cm}
+
+El reporte está dividido en 3 secciones, en la primera \eqref{s:marcoteorico} se comienza con una breve discusión 
+teórica sobre rayos cósmicos, sus componentes, y su detección. En la segunda sección 
+\eqref{s:metodologiaexperimental} se explica la metodología experimental seguida para la realización de cada uno de los 
+experimentos y en la tercera sección \eqref{s:resultados} se muestran los resultados obtenidos y se 
+hace un breve análisis de los mismos. Como ya se ha establecido al ser preliminar 
+este reporte no se espera un tratamiento completo de cada experimento, y en el 
+último que está en camino, nos muestra solamente el camino a seguir.
 
 \section{Marco Teórico}
+\label{s:marcoteorico}
 
 \subsection{Rayos Cósmicos}
 
@@ -237,6 +284,7 @@ hasta que los fotones no tienen suficiente energía para crear nuevos pares. Est
 está ilustrado en la parte izquierda de la figura \eqref{fig:fig3}.
 
 \subsubsection{Componente muónica}
+\label{ss:componentemuonica}
 
 Los piones positivos y negativos creados, pueden interaccionar con otros núcleos, 
 rompiéndolos, o decaer espontáneamente. Cuando un pión decae se convierte en 
@@ -366,6 +414,7 @@ algunos de los equipos que usamos para hacer las mediciones.
 
 
 \section{Metodología Experimental}
+\label{s:metodologiaexperimental}
 
 \subsection{Materiales utilizados}
 \label{ss:materialesutilizados}
@@ -386,6 +435,7 @@ A continuación se listan los materiales que fueron utilizados para las distinta
 
 
 \subsection{Medición del punto de operación}
+\label{ss:medicionoperacion}
 
 Se utilizó un arreglo de centelladores, llamado arreglo de coincidencias, con el cual se desea medir el punto de operación del sistema, y el rango de operación del mismo, 
 lo cual nos servirá para mediciones posteriores. A continuación se describen los 
@@ -413,6 +463,7 @@ Pasos:
 
 
 \subsection{Medición de la distribución angular de los muones}
+\label{ss:medicionangulos}
 
 Esta medición se hizo para medir la distribución angular de los muones y determinar 
 el porcentaje de los mismos que llegan desde todo lugar.
@@ -428,6 +479,7 @@ de muones para cada ángulo en un tiempo de 5 minutos por medición, en la secci
 de resultados se encuentran estos datos tabulados y graficados.
 
 \subsection{Medición de la Atenuación de Muones mediante el uso de plomo}
+\label{ss:medicionplomo}
 
 En esta sección el objetivo principal es cuantificar la atenuación de muones en 
 función de la densidad del material utilizado para atenuar, en este caso el plomo, 
@@ -455,6 +507,20 @@ Se harán las mediciones primero con hule espuma para tener una referencia y
 posteriormente se sustituyen con plomo.
 
 \section{Resultados}
+\label{s:resultados}
+
+Todos los errores reportados en las siguientes tablas fueron calculados con la desviación 
+estándar, cuya ecuación es 
+
+\begin{equation}
+ \sigma = \sqrt{\frac{1}{N}\sum_{i=1}^N (x_i - \mu)^2},
+\end{equation}
+
+donde $N$ es la cantidad de datos, $\mu = \frac{1}{2} \sum_{i=1}^N x_i$ es la 
+media de los datos y $x_i$ es cada dato puntual. Esta fue calculada con la 
+función \href{http://distributionsjl.readthedocs.org/en/latest/univariate.html?highlight=std\#std}{$\texttt{std}$} 
+del paquete $\texttt{Distributions}$ de Julia.
+
 
 \subsection{Medición del punto de operación}
 
@@ -488,7 +554,7 @@ Voltaje & Medición 1 & Medición 2 & Medición 3 & Medición 4 & Medición 5 & 
 
 \begin{figure}[H]
  \center 
- \includegraphics[scale=0.45]{atenuacionMuones1}
+ \includegraphics[scale=0.38]{atenuacionMuones1}
  \caption{Distribución angular de muones y curva de mejor ajuste.}
 \end{figure}
 
