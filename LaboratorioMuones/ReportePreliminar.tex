@@ -610,17 +610,34 @@ ecuación completa para el flujo a diferentes ángulos es
 \end{equation}
 
 donde $F_v$ es el flujo vertical. Este parámetro se ajusta dependiendo del ángulo 
-sólido sobre el cual se hacen las mediciones y la ventana de tiempo en la que se 
-hace la medición. En nuestro caso el mejor ajuste, que es la línea azul sólida 
-en la figura \eqref{fig:ajusteAngulos} fue de 
+sólido sobre el cual se hacen las mediciones y del umbral que se escoge en el discriminador 
+para las mediciones, en nuestro caso se usó un umbral de 13 mV, y por lo tanto el flujo 
+vertical de muones es menor que el teórico reportado. El flujo vertical de muones 
+será mayor a nivel del mar debido a que mientras más atmósfera recurran los rayos 
+cósmicos, es más probable que hayan más interacciones, y debido a que los muones son 
+partículas secundarias, entonces debemos esperar una disminución en este flujo debido 
+a que la Ciudad de México se encuentra a $2.225$ m sobre el nivel del mar. 
+
+\vspace{.3cm}
+
+En nuestro caso el mejor ajuste, que es la línea azul sólida en la
+figura \eqref{fig:ajusteAngulos} fue de 
 
 \begin{equation}
   F(\theta) = 40\cos^{2.16}{\theta} + 4 ,
 \end{equation}
 
-con lo cual hemos demostrado experimentalmente lo predicho por la teoría, claro 
-con ciertos errores visibles en las barras de error entre los 10 y 30 grados.
+En comparación, el valor reportado teórico es de 
 
+\begin{equation}
+  F(\theta) = 110\cos^{2.16}{\theta},
+\end{equation}
+
+y entonces en promedio nuestro flujo vertical es de 63.64 \% menor que el reportado
+a nivel del mar. En relación a la altura de la Ciudad de México y el umbral que se 
+utilizó, el valor obtenido y el ajuste a los datos, está en correspondencia con los 
+valores teóricos, con lo cual hemos demostrado experimentalmente lo predicho por la teoría, claro 
+con ciertos errores visibles en las barras de error entre los 10 y 30 grados.
 
 
 \subsection{Medición de la Atenuación de Muones mediante el uso de plomo}
