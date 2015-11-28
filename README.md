@@ -6,3 +6,4 @@ Repositorio donde guardaré las presentaciones e información relevante a la mat
 
 **Reporte preliminar** &#8594; [![PDFStatus](https://www.sharelatex.com/github/repos/FavioVazquez/DeteccionRayosCosmicos-PCF/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/FavioVazquez/DeteccionRayosCosmicos-PCF/builds/5b34a1b3aec53d873fd7eeed738fd70ff5873123/raw/output.pdf)
 
+**Reporte final** &#8594; [![PDFStatus](https://www.sharelatex.com/github/repos/FavioVazquez/DeteccionRayosCosmicos-PCF/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/FavioVazquez/DeteccionRayosCosmicos-PCF/builds/54aace8fb0f14ef96d22f9ef0179753978120a0e/raw/output.pdf)
