@@ -100,9 +100,12 @@ Universidad Nacional Autónoma de México}
 
 \maketitle
 
-\section{Discusión del detector}
+\tableofcontents
 
-\subsection{Geometría del detector}
+\newpage
+
+\addcontentsline{toc}{section}{Introducción}
+\section*{Introducción}
 
 BATATA (Buried Array Telescope at Auger) es un detector prototipo que se añadió 
 a AMIGA para cuantificar la contaminación electromagnética, y medir el radio entre
@@ -113,6 +116,17 @@ con un arreglo triangular de 200 m de lado compuesto con estaciones Cherenkov
 de superficie 3+2 de Auger.
 
 \vspace{.3cm}
+
+En este breve reporte hicimos una discusión de la geometría general del instrumento, 
+el centellador, la electrónica y los tubos fotomultiplicadores que lo constituyen. Luego 
+se hizo una discusión de algunas posibles críticas y cambios que se le podrían hacer 
+a BATATA.
+
+\newpage
+
+\section{Discusión del detector}
+
+\subsection{Geometría del detector}
 
 El detector está compuesto por tres planos de doble capa horizontales enterrados 
 a diferentes profundidades. Cada capa en un plano consiste en 49 tiras rectangulares 
@@ -146,9 +160,33 @@ Debajo se muestran algunas imágenes de la geometría del detector,
  esquemática de la disposición del detector. Tomada de \cite{trovato}.}
 \end{figure}
 
+El ``punch trough'' como función de la profundidad está muy fuertemente correlacionada 
+con la composición química del suelo en el cual el detector está enterrado. Por lo 
+tanto fue muy importante conocer cuan representativo es el suelo sobre BATATA y 
+su comparación con el suelo sobre los otros contadores del arreglo AMIGA. Para hacer 
+esto se realizó una caracterización minerológica, geoquímica y del tamaño de los 
+granos de toda el área de AMIGA, y particularmente el área donde está BATATA. Se 
+hicieron varios estudios, entre ellos mediciones de densidad, análisis de tamaño 
+de grano, caracterización de la forma de los granos, geoquímica de elementos 
+principales por fluorescencia de rayos-X, y composiciones minerales por difracción 
+de rayos-X. 
+
+\vspace{.3cm}
+
+Químicamente, la arena resultó ser muy homogénea a una profundidad de pocos metros, 
+mostrando altos contenidos de silicio, aluminio, hierro y calcio. La composición 
+promedio de la arena se acerca a la composición del granito. La densidad medida 
+prmedio fue de 1.7 g/cm$^3$ para la arena y 2.1 gm$^3$ para la gravilla. En condiciones 
+de agua saturada, la densidad aumentó a 25 \% en sedimentos de arena. La porosidad 
+efectiva calculada para la arena fue de $34\%$ y $25\%$ para la gravilla. 
+
 \subsection{El centellador}
 
-Los centelladores sólidos han sido utilizados extensivamente en los detectores 
+BATATA utiliza un tipo de centellador orgánico de plástico con fibras ópticas que
+recorren la longitud de onda. Los centelladores orgánicos se pueden solicitar a
+los fabricantes en forma de carretes  con sección transversal pequeña o en varas
+que se encuentran pre-cortadas, para facilitar su colocación, o directamente como
+detectores.Los centelladores sólidos han sido utilizados extensivamente en los detectores 
 de física de partículas, y en particular estos han sido los detectores preferidos 
 para calorímetros de muestreo. Algunas características fueron requeridas para 
 los centelladores que se utilizaron en la construcción de BATATA, entre ellas: 
@@ -195,7 +233,7 @@ de centellador tiene 4.1 cm de ancho, 1 cm de grosor y 2 m de largo.
  reflectiva. Tomada de \cite{trovato}.}
 \end{figure}
 
-\subsection{Fibra óptica}
+\subsubsection{Fibra óptica}
 
 Para garantizar una salida de luz aceptable, las fibras ópticas producidas por 
 Bicron y Kuraray fueron probadas en el laboratorio. Se escogió para el detector 
@@ -287,21 +325,154 @@ de estos dispositivos son:
  \item Alta sensitividad del cátodo.
 \end{itemize}
 
+El voltaje de operación del dispositivo es 950 V. La figura de abajo muestra la curva 
+de ganancia obtenida y la distribución de pulsos de carga para el punto de operación. 
+El pico gaussiano alrededor de cero en la figura es la distribución de carga de la 
+línea base, mientras el pico de la derecha es la distribución de carga de foto-electrones 
+simples. 
 
+\begin{figure}[H]
+ \center 
+ \includegraphics[scale=0.5]{fig6}
+ \caption{(a) Ganancia del tubo fotomultiplicador como función del voltaje 
+ suministrado. (b) Espectro para fotones simples para un voltaje suministrado de 
+ 950 V, con su ajuste superpuesto. Tomada de \cite{trovato}.}
+\end{figure}
 
 \section{Críticas y propuestas al detector}
 
-\subsection{Geometría del detector}
+La fibra óptica utilizada es BCF-92, la longitud de onda en la cual emite es la 
+correspondiente al color verde, con un pico en 492 nm, con un tiempo de decaimiento 
+de 2.7 ns \cite{saint}. 
 
-\subsection{El centellador}
 
-\subsection{Fibra óptica}
+\begin{figure}[H]
+ \center 
+ \includegraphics[scale=0.8]{fig7}
+ \caption{Espectros absorción y emisión de la fibra óptica BCF-92.}
+\end{figure}
 
-\subsection{Electrónica}
+Los diferentes compuestos que pueden conformar este tipo de centelladores son: 
+para la base del centellador: poliestireno,  tolueno de polivinilo, PMMA, benzol 
+polifenilo, etc. El centellador primario: p-Terphenyl, PPO, t-PBD, entre otros. 
+Para el corrimiento de la longitud de onda: POPOP, BBQ y bis-MSB. 
 
-\subsection{Tubo fotomultiplicador}
+\vspace{.3cm}
 
+Se propone utilizar en lugar de fibras de poliestireno, Tolueno de polivinilo. Como
+por ejemplo está el centellador plástico: BC-400, que está compuesto por Tolueno de 
+polivinilo y el tiempo de decaimiento es menor que el centellador utilizado en 
+BATATA, su temperatura de operación tiene un amplio rango a temperaturas bajas, 
+depende del lugar donde se colocará BATATA, podría ser una buena alternativa si 
+se tienen temperaturas muy bajas, sin embargo tiene un problema la distancia de 
+atenuación es de 1.6 m, así que si se utilizará este tipo de centellador, se 
+tendría que modificar la geometría, disminuyendo la longitud de las barras 
+centelladoras, el problema con esto es que se perdería área efectiva, y la cantidad
+de partículas detectadas disminuiría. A continuación se muestra una imagen de una 
+tabla con la comparación entre centelladores con base de poliestireno, tolueno de vinil, y 
+yoduro de sodio, tomada de \cite{mirza}.
+
+\begin{figure}[H]
+ \center
+ \includegraphics[scale=0.4]{fig8}
+\end{figure}
+
+La eficiencia cuántica de los tubos fotomultiplicadores varía entre 10-30\% dependiendo de la longitud 
+de onda, del fotocátodo y de la ventana de entrada del material. Son sensibles a
+campos magnéticos, lo cual no es problema en BATATA ya que los tubos fotomultiplicadores se encuentra
+aislada de ruido electromagnético al estar alejado de ciudades grandes. El material 
+del fotocátodo es un bialacalino, tienen una respuesta espectral al 
+fotocátodo de Sb-Cs, pero tiene mayor sensibilidad y menor corriente oscura.
+
+\vspace{.3cm}
+
+Puede proponerse verificar si existen nuevos tubos fotomultiplicadores que pueden ser 
+utilizados en BATATA, por ejemplo la misma compañía, Hamamatsu, tienen la fotomultiplicadores
+H7546B-100, la cual tiene mayor sensibilidad lumínica en el cátodo y en el ánodo, 
+lo cual serviría para mejorar la resolución energética y la calidad de la señal 
+recibida y posiblemente la eficiencia cuántica aumente. El material del fotocátodo 
+es un súper bialcalino, el cual tiene mayor sensibilidad aún. La compañía saca 
+continuamente nuevos tubos fotomultiplicadores que van mejorando los materiales 
+del fotocátodo aumentando así la sensibilidad. Así que también se propone estar 
+actualizados con las nuevas tecnologías que puedan mejorar la propiedades de 
+detección de los instrumentos y de los tubos fotomultiplicadores en particular, 
+ya que son un elemento vital para una buena transformación de la luz proveniente de 
+los centelladores, y mientras más resolución se tenga, con más precisión se podrán 
+cumplir los objetivos de BATATA.
+
+\vspace{.3cm}
+
+Por otro lado, se pueden usar también plásticos alifáticos, como por ejemplo el 
+acrílico, aunque tienen la mitad de eficiencia lumínica que los plásticos aromáticos. 
+Los centelladores líquidos con aditivo de gadolinio son frecuentemente usados en física de altas 
+energías. La eficiencia de detección incrementa no sólo con grandes secciones transversales, sino 
+también con altas concentraciones de Gd en el centellador. Usualmente las sustancias que 
+contienen Gd son insertadas en un medio líquido, formando, por ejemplo, centelladores líquidos. 
+Pero el uso práctico de centelladores líquidos está relacionado a muchos problemas de la 
+estabilidad del tiempo de los aparatos de detección y la seguridad. Cambiando la base de un 
+centellador líquido a uno sólido o plástico puede ser una forma resolver esos problemas. Se puede 
+proponer usar un aditivo auxiliar para centelladores plásticos que absorba en la región de 
+absorción del aditivo lumínico primario y emita en la región de emisión del aditivo lumínico 
+secundario. Este tipo de centellador muestra una eficiencia lumínica del 62 \% con respecto a la del 
+centellador estándar.
+
+\vspace{.3cm}
+
+El sistema de lectura de BATATA consiste de tres tarjetas FPGAs Spartan 2E de 
+Xilinx y una computadora SBC Linux. La computadora es el cerebro de operación del
+sistema puesto que mediante el envío de comandos puede configurar las FPGAs y 
+además recolectar los datos de detección recibidos y procesados por estas.  
+Sin embargo, podriamos proponer algunos cambios en la electronica, por ejemplo,
+las FPGAs se utilizan en aplicaciones similares a los ASICs,sin embargo son más 
+lentas, tienen un mayor consumo de potencia y no pueden abarcar sistemas tan
+complejos como ellos. A pesar de esto, las FPGAs tienen las ventajas de ser
+reprogramables (lo que añade una enorme flexibilidad al flujo de diseño),
+sus costes de desarrollo y adquisición son mucho menores para pequeñas cantidades 
+de dispositivos y el tiempo de desarrollo es también menor.
+
+\vspace{.3cm}
+
+Las FPGAs se utilizan en aplicaciones similares a los ASICs pero tienen una serie 
+de conveniente así como de ventajas respecto a estos últimos. Como inconvenientes podemos 
+decir que son más lentas, consumen mayor potencia y no pueden realizar sistemas excesivamente 
+complejos. Como ventajas podemos ver que son reprogramables, los costes de desarrollo 
+y adquisición son mucho menores y el tiempo de diseño y manufacturación es menor.
+Muchos FPGA modernos soportan la reconfiguración parcial del sistema, 
+permitiendo que una parte del diseño sea reprogramada, mientras las demás partes 
+siguen funcionando. Este es el principio de la idea de la ``computación 
+reconfigurable'', o los ``sistemas reconfigurables''. Las desventajas del diseño 
+totalmente a la medida son un costo y tiempo de desarrollo mayores, costos fijos 
+mayores, mayor complejidad del software CAD y la necesidad de habilidades mucho 
+mayores por parte del equipo de diseño.
+
+\newpage
+
+\addcontentsline{toc}{section}{Conclusiones}
 \section*{Conclusiones}
+
+En este breve reporte que hemos realizado, se hizo una descripción de los 
+elementos del detector BATATA, así como una pequeña crítica y propuesta de algunos 
+cambios que se le pueden hacer a partes de los instrumentos. Al hacer un estudio 
+de los artículos técnicos de BATATA y algunas tesis sobre su diseño y construcción 
+vimos que el diseño y la construcción del instrumento fue muy bien pensada. Se 
+hicieron compromisos, los cuales no quedan claros para un observador externo al 
+proyecto, pero tenemos una idea de que se tuvieron que hacer para bajar costos y 
+no disminuir demasiado la calidad. 
+
+\vspace{.3cm}
+
+Luego de mucha investigación, pudimos encontrar pocas cosas que criticar y mejoras que 
+proponer, pero la principal conclusión es que hay que mantenerse actualizado 
+y verificar si existen nuevas tecnologías que puedan mejorar el instrumento en general, 
+y sus elementos internos. Obviamente habría que esperar algún artículo de la colaboración 
+Auger en la que se reporten los resultados de BATATA, ya que sin los mismos no tenemos 
+una idea concisa si los elementos, materiales, geometría y características que 
+hemos descritos funcionarán. Con esto podrían hacerse propuestas y críticas mucho 
+más formales y específicas; por lo tanto con lo que hemos realizado creemos que aunque 
+no sea mucho, puede verse como una posible mejora directa luego de que se produzcan 
+los primeros resultados.
+
+\newpage
 
 \begin{thebibliography}{10}
  \bibitem{alfaro}
@@ -313,6 +484,13 @@ de estos dispositivos son:
  \bibitem{minos}
  The MINOS Collaboration, \emph{MINOS Technical Desing Report}, Documento interno 
  FNAL, NuMI-L-337, 1998. 
+ \bibitem{saint}
+ Saint-Global Crystals, \emph{Scintillation Products}, 2000.
+ \bibitem{mirza}
+ S. Mirza et al., \emph{Influence of various geometries on detection efficiency of 
+ polyestirene, polyvinyl-toluene, and sodium iodide Detectors using Geant4}, 
+ Influence of Variou Geometries on Detection Efficiency of Nuclear Technology \& 
+ Radiation Protection, vol. \textbf{30}, pp. 188-197.
 \end{thebibliography}
 
 
